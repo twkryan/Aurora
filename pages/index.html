@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landing Page</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--font oswald-->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Fonte Poppins (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS customizado (preloader e animações) -->
+  <link rel="stylesheet" href="../style/StyleLP.css">
+
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+</head>
+<body class="bg-[#1D1B1B] font-poppins overflow-x-hidden box-border">
+
+  <!-- Preloader -->
+  <div class="preloader fixed inset-0 flex justify-center items-center bg-black z-50 opacity-100 animate-fadeOut">
+    <img src="../assets/logo.svg" alt="Logo" class="preloader-logo w-72 opacity-0 animate-logoFade">
+  </div>
+
+  <!-- Jornada com slider -->
+  <section class="jornada relative h-screen w-full overflow-hidden flex justify-center items-center text-center">
+    <div class="slide active absolute inset-0 bg-cover bg-center" style="background-image: url('../assets/A JORNADA DOS PRIMEIROS COMPUTADORES 1.png');"></div>
+    <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('../assets/A JORNADA DOS PRIMEIROS COMPUTADORES 2.png');"></div>
+    <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('../assets/A JORNADA DOS PRIMEIROS COMPUTADORES 3.png');"></div>
+
+    <div class="conteudo-jornada relative z-10 flex flex-col justify-end h-full pb-12 px-4 text-center">
+      <h2 class="font-oswald text-[3rem] tracking-wide font-semibold sm:text-4xl md:text-6xl text-[#fffdfa] drop-shadow-[3px_3px_8px_rgba(0,0,0,0.6)]">
+      A JORNADA DOS PRIMEIROS <br> COMPUTADORES
+        </h2>
+      <p class="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mt-8 drop-shadow-[1px_1px_6px_rgba(0,0,0,0.5)]">
+        De 1936 a 1950, uma revolução silenciosa começou a transformar o mundo:
+        <br> da Máquina de Turing ao ENIAC, da teoria à prática, da ideia à inovação.
+      </p>
+
+      <div class="inicie-wrapper flex flex-col justify-end items-center mt-10 h-[40%]">
+        <a href="#">
+          <button class="inicie bg-transparent border-2 border-white text-white font-semibold rounded-full w-60 py-2 text-base hover:bg-white hover:text-black transition-all duration-300 uppercase">
+            INICIE A JORNADA
+          </button>
+        </a>
+        <h3 class="text-lg sm:text-xl font-semibold text-[#fffdfa] mt-6 cursor-pointer">VEJA MAIS</h3>
+        <div class="scroll-down w-0 h-0 mt-6 border-l-[10px] border-r-[10px] border-t-[15px] border-l-transparent border-r-transparent border-t-[#fffdfa] animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+<section class="bg-[#1D1B1B] py-20 px-6 md:px-16 text-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Título -->
+    <div class="text-center md:text-left mb-12">
+      <h2 class="text-3xl md:text-4xl font-oswald font-semibold uppercase tracking-wide">
+        Eras
+      </h2>
+      <div class="w-[32rem] h-[2px] bg-gray-500 mx-auto md:mx-0 mt-3 max-w-full box-border"></div>
+      <p class="text-gray-300 mt-4 text-sm md:text-base">
+        Navegue pelos momentos que definiram a computação moderna.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="flex flex-col md:flex-row gap-6">
+      <!-- Card Grande -->
+      <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer w-full md:w-[42rem] max-w-full box-border h-[25rem]">
+        <img src="../assets/as primeiras ideias 1939.png" 
+             alt="As primeiras ideias (1936-1939)" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+        <h3 class="absolute bottom-4 left-4 text-lg md:text-xl font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+          As primeiras ideias (1936–1939)
+        </h3>
+      </div>
+
+      <!-- Cards Pequenos -->
+      <div class="flex flex-col gap-6 md:w-[25rem] max-w-full box-border">
+        <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer h-[11.5rem] w-full max-w-full box-border">
+          <img src="../assets/os primeiros computadores 1940.png" 
+               alt="Os primeiros computadores (1940-1946)" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+          <h3 class="absolute bottom-4 left-4 text-lg md:text-xl font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+            Os primeiros computadores (1940–1946)
+          </h3>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer h-[11.5rem] w-full max-w-full box-border">
+          <img src="../assets/a era da expansao 1947.png" 
+               alt="A era da expansão (1947-1950)" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+          <h3 class="absolute bottom-4 left-4 text-lg md:text-xl font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+            A era da expansão (1947–1950)
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#1D1B1B] py-20 px-6 md:px-16 text-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Título -->
+    <div class="text-center md:text-left mb-12">
+      <h2 class="text-3xl md:text-4xl font-oswald font-semibold uppercase tracking-wide">
+        O Cenário de uma Revolução
+      </h2>
+      <div class="w-[53rem] h-[2px] bg-gray-500 mx-auto md:mx-0 mt-3 max-w-full box-border"></div>
+      <p class="text-gray-300 mt-4 text-sm md:text-base">
+        Explore os eventos mundiais que não foram apenas um pano de fundo, mas a força motriz da revolução tecnológica.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="flex flex-col md:flex-row gap-6">
+      <!-- Card Grande -->
+      <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer w-full md:w-[42rem] max-w-full box-border h-[25rem]">
+        <img src="../assets/Vésperas da Tempestade.png" 
+             alt="Vésperas da Tempestade" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+        <h3 class="absolute bottom-4 left-4 text-lg md:text-xl font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+          Vésperas da Tempestade
+        </h3>
+      </div>
+
+      <!-- Card Pequeno -->
+      <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer w-full md:w-[25rem] max-w-full box-border h-[25rem]">
+        <img src="../assets/A Guerra como Aceleradora.png" 
+             alt="A Guerra como Aceleradora" 
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+        <h3 class="absolute bottom-4 left-4 text-lg md:text-xl font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+          A Guerra como Aceleradora
+        </h3>
+      </div>
+    </div>
+  </div>
+
+<!-- Container dos 3 cards menores -->
+<div class="max-w-6xl mx-auto flex justify-start mt-12">
+  <!-- Primeiro card -->
+  <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer w-[22rem] h-[13rem]">
+    <img src="../assets/Um Novo Começo.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+    <h3 class="absolute bottom-4 left-4 text-lg font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">Um Novo Começo</h3>
+  </div>
+
+  <!-- Segundo card -->
+  <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer w-[22rem] h-[13rem] ml-4">
+    <img src="../assets/A Cortina de Ferro.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+    <h3 class="absolute bottom-4 left-4 text-lg font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">A Cortina de Ferro</h3>
+  </div>
+
+  <!-- Terceiro card -->
+  <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer w-[22rem] h-[13rem] ml-4">
+    <img src="../assets/O Nascimento da Teoria.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75"/>
+    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+    <h3 class="absolute bottom-4 left-4 text-lg font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">O Nascimento da Teoria</h3>
+  </div>
+</div>
+</section>
+
+
+<!-- Card Alan Turing -->
+<div class="relative w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6 my-8 px-4">
+
+  <!-- Quadrado do texto na frente -->
+  <div class="bg-[#252525] rounded-2xl p-6 md:p-8 w-full sm:w-[28rem] md:w-[40rem] aspect-square shadow-lg z-20 flex flex-col justify-between -translate-y-4 md:-translate-y-8">
+    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-12 md:mt-16 font-oswald font-bold uppercase text-white mb-4 text-center md:text-left">
+      ALAN TURING
+    </h3>
+    <p class="text-gray-300 mt-4 md:mt-10 text-sm sm:text-base md:text-base leading-relaxed flex-grow text-center md:text-left">
+      A mente brilhante que lançou os fundamentos da nossa era tecnológica. De seu trabalho que ajudou a encurtar uma guerra à sua exploração sobre a inteligência artificial, seu impacto continua a moldar o nosso mundo.
+    </p>
+    <a href="#" class="flex justify-center md:justify-start">
+      <button class="mt-4 md:mt-6 text-white border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 w-48 md:w-[20rem]">
+        Veja Mais
+      </button>
+    </a>
+  </div>
+
+  <!-- Quadrado da imagem atrás do texto -->
+  <div class="relative w-full sm:w-[24rem] md:w-[36rem] aspect-square rounded-2xl overflow-hidden shadow-lg z-10 translate-y-4 md:translate-y-8 -ml-0 md:-ml-20">
+    <img src="../assets/turingQuadrado.png" alt="Alan Turing" class="w-full h-full object-cover rounded-2xl"/>
+  </div>
+
+</div>
+
+<!-- Card Claude Shannon -->
+<div class="relative w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6 my-12 px-4">
+
+  <!-- Quadrado do texto na frente -->
+  <div class="bg-[#252525] rounded-2xl p-6 md:p-8 w-full sm:w-[28rem] md:w-[40rem] aspect-square shadow-lg z-20 flex flex-col justify-between -translate-y-4 md:-translate-y-8">
+    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-12 md:mt-16 font-oswald font-bold uppercase text-white mb-4 text-center md:text-left">
+      CLAUDE SHANNON
+    </h3>
+    <p class="text-gray-300 mt-4 md:mt-10 text-sm sm:text-base md:text-base leading-relaxed flex-grow text-center md:text-left">
+      Claude Shannon foi um matemático e engenheiro americano considerado o pai da Teoria da Informação. Ele desenvolveu os fundamentos da comunicação digital moderna, introduzindo o conceito de bits. Seu trabalho revolucionou áreas como computação, criptografia e telecomunicações.
+    </p>
+    <a href="#" class="flex justify-center md:justify-start">
+      <button class="mt-4 md:mt-6 text-white border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 w-48 md:w-[20rem]">
+        Veja Mais
+      </button>
+    </a>
+  </div>
+
+  <!-- Quadrado da imagem atrás do texto -->
+  <div class="relative w-full sm:w-[24rem] md:w-[36rem] aspect-square rounded-2xl overflow-hidden shadow-lg z-10 translate-y-4 md:translate-y-8 -ml-0 md:-ml-20">
+    <img src="../assets/claudeQuadrado.png" alt="Claude Shannon" class="w-full h-full object-cover rounded-2xl"/>
+  </div>
+
+</div>
+<!-- Footer -->
+<footer class="bg-[#282525] text-gray-300 py-12">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-8">
+
+    <!-- Coluna 1: Logo + Links -->
+    <div class="flex flex-col items-start gap-4">
+      <div class="w-[14rem] rounded-md flex items-center justify-center">
+        <img src="../assets/logo.svg" alt="">
+      </div>
+      <a href="#" class="hover:text-white transition-colors">Início</a>
+      <a href="#" class="hover:text-white transition-colors">Sobre o Projeto</a>
+    </div>
+
+    <!-- Coluna 2: Explorar por Temas -->
+    <div class="flex flex-col items-start gap-2">
+      <select class="bg-[#252525] text-gray-300 p-2 rounded-md w-48 cursor-pointer">
+        <option>Fundamentos Teóricos e Conceituais</option>
+        <option>A Era eletromecânica</option>
+        <option>Computação para Fins Específicos: Guerra e Ciência</option>
+        <option>A Revolução Eletrônica: A Era das Válvulas</option>
+        <option>O Nascimento do Software e do Computador Moderno</option>
+        <option>Tecnologias, Pessoas e Comunidade</option>
+      </select>
+    </div>
+
+    <!-- Coluna 3: Explorar por Eras -->
+    <div class="flex flex-col items-start gap-2">
+      <select class="bg-[#252525] text-gray-300 p-2 rounded-md w-48 cursor-pointer">
+        <option>Idade Antiga</option>
+        <option>Idade Média</option>
+        <option>Era Contemporânea</option>
+      </select>
+    </div>
+
+    <!-- Coluna 4: Recursos + Links -->
+    <div class="flex flex-col items-start gap-4">
+      <span class="font-semibold uppercase">Recursos</span>
+      <a href="#" class="hover:text-white transition-colors">Glossário</a>
+      <a href="#" class="hover:text-white transition-colors">Biografias</a>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="../js/preloader.js"></script>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+    function changeSlide() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    setInterval(changeSlide, 3000);
+  </script>
+
+</body>
+</html>

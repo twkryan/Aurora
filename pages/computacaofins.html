@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computação Para Fins Específicos</title>
+  <link href="../style/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#1D1B1B] min-h-screen text-white">
+
+  <!-- Header (responsivo: altura e gaps adaptativos) -->
+  <header class="w-full bg-[#282525] grid grid-cols-3 items-center px-4 sm:px-6 md:px-12 mb-8 md:mb-32 h-[6rem] md:h-[7.5rem]">
+    <!-- Botão menu (escala em mobile) -->
+    <button class="justify-self-start ml-4 md:ml-12">
+      <img src="../assets/Align left.svg" alt="ícone do menu" class="w-8 h-8 md:w-10 md:h-10">
+    </button>
+
+    <!-- Logo central (escala por breakpoint) -->
+    <div class="col-span-3 md:col-span-1 flex justify-center md:justify-center">
+      <img src="../assets/logo.svg" alt="logo do site" class="w-[12rem] sm:w-[16rem] md:w-[20rem] h-auto object-contain">
+    </div>
+
+    <!-- Espaçador direito (mantém grid 3 colunas) -->
+    <div class="hidden md:block"></div>
+  </header>
+
+  <!-- Título principal (TOTALMENTE responsivo) -->
+  <section class="text-center mt-2 px-4">
+    <h1 class="font-playfair font-bold uppercase leading-tight tracking-tight"
+        style="font-size: clamp(1.5rem, 4.5vw, 4.5rem);">
+      Computação para Fins
+    </h1>
+
+    <h1 class="font-playfair font-bold uppercase mt-2 mb-4 leading-tight tracking-tight"
+        style="font-size: clamp(1.5rem, 4.5vw, 4.5rem);">
+      Específicos: Guerra e Ciência
+    </h1>
+
+    <hr class="mb-8 border-gray-300 w-1/2 sm:w-1/3 h-px mx-auto">
+  </section>
+
+  <!-- Card (imagem + texto) - responsivo; textura cobre corretamente no mobile -->
+  <section class="flex justify-center my-16 px-4 sm:px-6 md:px-12">
+    <div class="flex flex-col md:flex-row bg-[#2D2B2B] bg-texture bg-cover bg-center bg-no-repeat rounded-2xl max-w-[1340px] w-full overflow-hidden shadow-lg min-h-[420px] md:min-h-[500px]">
+      
+      <!-- Imagem à esquerda -->
+      <div class="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-8 md:pl-16">
+        <img src="../assets/rapid arithmetical.png" alt="Rapid Arithmetical Machine de Vannevar Bush" 
+             class="object-contain max-h-[380px] sm:max-h-[420px] md:max-h-[90%] w-full h-auto rounded-2xl">
+      </div>
+
+      <!-- Texto à direita -->
+      <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-center text-white text-center md:text-left">
+        <h2 class="text-[2.25rem] sm:text-[2.5rem] md:text-[3rem] font-bold mb-6 mt-2 leading-[3rem] break-words">
+          RAPID ARITHMETICAL <br> MACHINE DE <br> VANNEVAR BUSH
+        </h2>
+
+        <p class="mb-8 text-sm sm:text-base md:text-lg leading-relaxed max-w-[600px] mx-auto md:mx-0">
+          Criada por Vannevar Bush nos anos 1930, foi uma das pioneiras no uso de circuitos e engrenagens 
+          para automatizar cálculos, abrindo caminho para os computadores modernos.
+        </p>
+
+        <hr class="border-gray-500 w-16 mx-auto md:mx-0">
+      </div>
+    </div>
+  </section>
+
+<!-- Card invertido (texto à esquerda, imagem à direita) -->
+<section class="flex justify-center my-16 px-4 sm:px-6 md:px-12">
+  <div class="flex flex-col md:flex-row-reverse bg-[#2D2B2B] bg-texture bg-cover bg-center bg-no-repeat rounded-2xl max-w-[1340px] w-full overflow-hidden shadow-lg min-h-[420px] md:min-h-[500px]">
+    
+    <!-- Imagem à direita -->
+    <div class="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-8 md:pr-16">
+      <img src="../assets/enigma.png" alt="Enigma e a Bomba Criptológica de Turing" 
+           class="object-contain max-h-[380px] sm:max-h-[420px] md:max-h-[90%] w-full h-auto rounded-2xl">
+    </div>
+
+    <!-- Texto à esquerda -->
+    <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-center text-white text-center md:text-left">
+      <h2 class="text-[2.25rem] sm:text-[2.5rem] md:text-[3rem] font-bold mb-6 mt-2 leading-[3rem] break-words">
+        ENIGMA E A BOMBA <br> CRIPTOLÓGICA DE TURING
+      </h2>
+
+      <p class="mb-8 text-sm sm:text-base md:text-lg leading-relaxed max-w-[600px] mx-auto md:mx-0">
+        A cifra que guardava segredos de guerra e a máquina genial criada para quebrá-la.
+        Mergulhe na história da criptografia nazista e da corrida para decifrá-la em Bletchley Park.
+      </p>
+
+      <hr class="border-gray-500 w-16 mx-auto md:mx-0">
+    </div>
+  </div>
+</section>
+<!-- Terceiro Card (copia do primeiro card) -->
+<section class="flex justify-center my-16 px-4 sm:px-6 md:px-12">
+  <div class="flex flex-col md:flex-row bg-[#2D2B2B] bg-texture bg-cover bg-center bg-no-repeat rounded-2xl max-w-[1340px] w-full overflow-hidden shadow-lg min-h-[420px] md:min-h-[500px]">
+    
+    <!-- Imagem à esquerda -->
+    <div class="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-8 md:pl-16">
+      <img src="../assets/ff708793-7dd0-4984-ae10-a2450aeb0f8a.png" alt="RDA2: Rockefeller Differential Analyzer II" 
+           class="object-contain max-h-[380px] sm:max-h-[420px] md:max-h-[90%] w-full h-auto rounded-2xl">
+    </div>
+
+    <!-- Texto à direita -->
+    <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-center text-white text-center md:text-left">
+      <h2 class="text-[2.25rem] sm:text-[2.5rem] md:text-[3rem] font-bold mb-6 mt-2 leading-[3rem] break-words">
+        RDA2: ROCKEFELLER <br> DIFFERENTIAL <br> ANALYZER II
+      </h2>
+
+      <p class="mb-8 text-sm sm:text-base md:text-lg leading-relaxed max-w-[600px] mx-auto md:mx-0">
+        Uma versão aprimorada e mais poderosa do analisador diferencial, capaz de resolver problemas 
+        de engenharia ainda mais complexos para o esforço de guerra.
+      </p>
+
+      <hr class="border-gray-500 w-16 mx-auto md:mx-0">
+    </div>
+  </div>
+</section>
+<!-- Quarto Card (cópia do segundo, invertido) -->
+<section class="flex justify-center my-16 px-4 sm:px-6 md:px-12">
+  <div class="flex flex-col md:flex-row-reverse bg-[#2D2B2B] bg-texture bg-cover bg-center bg-no-repeat rounded-2xl max-w-[1340px] w-full overflow-hidden shadow-lg min-h-[420px] md:min-h-[500px]">
+    
+    <!-- Imagem à direita -->
+    <div class="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-8 md:pr-16">
+      <img src="../assets/colossus.png" alt="Colossus Mark I" 
+           class="object-contain max-h-[380px] sm:max-h-[420px] md:max-h-[90%] w-full h-auto rounded-2xl">
+    </div>
+
+    <!-- Texto à esquerda -->
+    <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-center text-white text-center md:text-left">
+      <h2 class="text-[2.25rem] sm:text-[2.5rem] md:text-[3rem] font-bold mb-6 mt-2 leading-[3rem] break-words">
+        COLOSSUS <br> MARK I
+      </h2>
+
+      <p class="mb-8 text-sm sm:text-base md:text-lg leading-relaxed max-w-[600px] mx-auto md:mx-0">
+        O gigante eletrônico ultrassecreto. Veja como o Colossus foi usado para decifrar as mensagens
+        criptografadas do Alto Comando Alemão, acelerando o fim da Segunda Guerra.
+      </p>
+
+      <hr class="border-gray-500 w-16 mx-auto md:mx-0">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
