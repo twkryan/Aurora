@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Teóricos e Conceituais</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!--font oswald-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fonte Poppins (opcional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- font playfair -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Seu CSS customizado (preloader e animações) -->
+    <link rel="stylesheet" href="../../style/StyleLP.css">
+
+    <link rel="icon" href="../../assets/img/logo pequena.svg" type="image/svg+xml" />
+</head>
+
+
+<body class="bg-[#1D1B1B] font-poppins overflow-x-hidden box-border">
+    <!-- Header e Banner -->
+    <header
+        class="w-full bg-[#1D1B1B] flex items-center justify-between px-6 md:px-16 py-4 z-20 h-[5rem] md:h-[5rem] relative">
+        <!-- Logo central -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 pt-[2rem] pb-[1.57663rem]">
+            <img src="../../assets/img/logo principal.svg" alt="Logo Aurora"
+                class="h-[2rem] md:h-[2rem] w-[14rem] md:w-[14rem]">
+        </div>
+
+        <!-- Logo à direita (menu) -->
+        <div>
+            <img src="../../assets/img/logoMenu.svg" alt="Logo Menu" class="h-[2rem] md:h-[2rem] w-[2rem] md:w-[2rem]">
+        </div>
+    </header>
+
+
+    <!-- Banner principal -->
+    <section class="relative h-[calc(100vh-80px)] w-full overflow-hidden">
+        <!-- Imagem de fundo -->
+        <img src="../../assets/img/fundamentosCalculista.png" alt="veio"
+            class="absolute inset-0 w-full h-full object-cover">
+
+        <!-- Texto central -->
+        <div class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
+            <h1 class="text-white text-center font-playfair text-[3rem] font-extrabold leading-normal uppercase">
+                Fundamentos Teóricos e <br> Conceituais
+            </h1>
+            <div class="h-[2px] w-full max-w-[23rem] bg-[rgba(219,219,219,0.8)] mx-auto"></div>
+        </div>
+    </section>
+
+
+    <!--Seção dos Cards-->
+    <section class="bg-[#1D1B1B] py-20 px-6 md:px-16 text-white">
+        <div class="max-w-6xl mx-auto">
+            <!-- Cards -->
+            <div class="flex flex-col md:flex-row gap-6">
+
+                <!-- Card Grande + Parágrafo -->
+                <div class="flex flex-col w-full md:w-[50rem] max-w-full box-border">
+                    <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer h-[28rem]">
+                        <img src="../../assets/img/maquinaturing.png" alt="turing"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+
+                        <!-- Linha de tempo -->
+                        <div
+                            class="absolute bottom-[9rem] left-4 right-4 flex items-center justify-between text-[1rem] font-playfair text-[rgba(219,219,219,0.8)]">
+                            <span>1936</span>
+                            <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-4"></div>
+                            <span>ALAN TURING</span>
+                        </div>
+
+                        <h3
+                            class="absolute bottom-[4rem] left-4 text-lg md:text-xl font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                            <span class="flex items-center gap-2">
+                            Máquina de Turing
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
+                                    fill="none">
+                                    <path d="M1 9.56348L9.56333 1.00015M9.56333 1.00015H1.85633M9.56333 1.00015V8.70714"
+                                        stroke="#DDDDDD" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </h3>
+                    </div>
+
+                    <!-- Parágrafo abaixo -->
+                    <p
+                        class="text-[#FFF] text-opacity-50 font-[Montserrat] text-[1rem] font-normal leading-normal tracking-[0.02rem] mt-4">
+                        Alan Turing propôs um modelo teórico capaz de simular qualquer processo de cálculo: a <br> Máquina de Turing. Ela não era um computador físico, mas um conceito que <br> mostrou que problemas complexos.
+                    </p>
+                </div>
+
+                <!-- Card Pequeno + Parágrafo -->
+                <div class="flex flex-col w-full md:w-[25rem] max-w-full box-border">
+                    <div class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer h-[28rem]">
+                        <img src="../../assets/img/arquitetura von neumann.png" alt="arquitetura von neumann"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+
+                        <!-- Linha de tempo -->
+                        <div
+                            class="absolute bottom-[9rem] left-4 right-4 flex items-center justify-between text-[1rem] font-playfair text-[rgba(219,219,219,0.8)]">
+                            <span>1943</span>
+                            <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-4"></div>
+                            <span>VON NEUMANN</span>
+                        </div>
+
+                        <h3
+                            class="absolute bottom-[4rem] left-4 text-lg md:text-xl font-semibold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] flex items-center gap-2">
+                            Arquitetura Von Neumann
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
+                                fill="none">
+                                <path d="M1 9.56348L9.56333 1.00015M9.56333 1.00015H1.85633M9.56333 1.00015V8.70714"
+                                    stroke="#DDDDDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </h3>
+                    </div>
+
+                    <!-- Parágrafo abaixo -->
+                    <p
+                        class="text-[#FFF] text-opacity-50 font-[Montserrat] text-[1rem] font-normal leading-normal tracking-[0.02rem] mt-4">
+                        A Arquitetura de Von Neumann definiu o modelo básico dos computadores modernos. 
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Container dos 3 cards menores -->
+<div class="max-w-6xl mx-auto flex justify-start mt-12 gap-4">
+
+  <!-- Primeiro card -->
+  <div class="flex flex-col w-[24rem]">
+    <div
+      class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer h-[13rem]">
+      <img src="../../assets/img/cibernetica.png"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+
+      <!-- Linha de tempo -->
+      <div
+        class="absolute bottom-[3.5rem] left-4 right-4 flex items-center justify-between text-[0.9rem] font-playfair text-[rgba(219,219,219,0.8)]">
+        <span>1948</span>
+        <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-2"></div>
+        <span>Norbert Wiener</span>
+      </div>
+
+      <h3
+        class="absolute bottom-[1rem] left-4 text-lg font-semibold uppercase flex items-center gap-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+        Cibernética
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+          <path d="M1 9.56348L9.56333 1.00015M9.56333 1.00015H1.85633M9.56333 1.00015V8.70714"
+            stroke="#DDDDDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </h3>
+    </div>
+    <p
+      class="text-[rgba(255,255,255,0.5)] font-[Montserrat] text-[0.95rem] font-normal leading-normal tracking-[0.02rem] mt-2">
+      A Cibernética é a ciência que estuda os sistemas de controle e comunicação, tanto em máquinas quanto em seres vivos.
+    </p>
+  </div>
+
+  <!-- Segundo card -->
+  <div class="flex flex-col w-[24rem]">
+    <div
+      class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer h-[13rem]">
+      <img src="../../assets/img/testedeturingpreto.png"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+
+      <!-- Linha de tempo -->
+      <div
+        class="absolute bottom-[3.5rem] left-4 right-4 flex items-center justify-between text-[0.9rem] font-playfair text-[rgba(219,219,219,0.8)]">
+        <span>1949</span>
+        <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-2"></div>
+        <span>ALAN TURING</span>
+      </div>
+
+      <h3
+        class="absolute bottom-[1rem] left-4 text-lg font-semibold uppercase flex items-center gap-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+        TESTE DE TURING
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+          <path d="M1 9.56348L9.56333 1.00015M9.56333 1.00015H1.85633M9.56333 1.00015V8.70714"
+            stroke="#DDDDDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </h3>
+    </div>
+    <p
+      class="text-[rgba(255,255,255,0.5)] font-[Montserrat] text-[0.95rem] font-normal leading-normal tracking-[0.02rem] mt-2">
+      O Teste de Turing foi criado para avaliar se <br> uma máquina pode demonstrar inteligência <br> semelhante à humana.
+    </p>
+  </div>
+
+  <!-- Terceiro card -->
+  <div class="flex flex-col w-[24rem]">
+    <div
+      class="relative overflow-hidden rounded-2xl group shadow-lg cursor-pointer h-[13rem]">
+      <img src="../../assets/img/memexpreto.png"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+
+      <!-- Linha de tempo -->
+      <div
+        class="absolute bottom-[3.5rem] left-4 right-4 flex items-center justify-between text-[0.9rem] font-playfair text-[rgba(219,219,219,0.8)]">
+        <span>1945</span>
+        <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-2"></div>
+        <span>VANNEVAR BUSH</span>
+      </div>
+
+      <h3
+        class="absolute bottom-[1rem] left-4 text-lg font-semibold uppercase flex items-center gap-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+        MEMEX
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+          <path d="M1 9.56348L9.56333 1.00015M9.56333 1.00015H1.85633M9.56333 1.00015V8.70714"
+            stroke="#DDDDDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </h3>
+    </div>
+    <p
+      class="text-[rgba(255,255,255,0.5)] font-[Montserrat] text-[0.95rem] font-normal leading-normal tracking-[0.02rem] mt-2">
+     Vannevar Bush idealizou o MEMEX, um <br> dispositivo que permitiria armazenar e <br> recuperar informações de forma associativa, <br> imitando o pensamento humano. 
+    </p>
+  </div>
+
+</div>
+
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#282525] text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-8">
+
+            <!-- Coluna 1: Logo + Links -->
+            <div class="flex flex-col items-start gap-4">
+                <div class="w-[14rem] rounded-md flex items-center justify-center">
+                    <img src="../../assets/img/logo principal.svg">
+                </div>
+                <a href="#" class="hover:text-white transition-colors">Início</a>
+                <a href="#" class="hover:text-white transition-colors">Sobre o Projeto</a>
+            </div>
+
+            <!-- Coluna 2: Explorar por Temas -->
+            <div class="flex flex-col items-start gap-2">
+                <select
+                    class="bg-[#2b2b2b] text-gray-200 p-3 rounded-lg w-56 cursor-pointer border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 appearance-none">
+                    <option>Explorar por Temas</option>
+                    <option>Fundamentos Teóricos e Conceituais</option>
+                    <option>A Era eletromecânica</option>
+                    <option>Computação para Fins Específicos: Guerra e Ciência</option>
+                    <option>A Revolução Eletrônica: A Era das Válvulas</option>
+                    <option>O Nascimento do Software e do Computador Moderno</option>
+                    <option>Tecnologias, Pessoas e Comunidade</option>
+                </select>
+            </div>
+
+            <!-- Coluna 3: Explorar por Eras -->
+            <div class="flex flex-col items-start gap-2">
+                <select
+                    class="bg-[#2b2b2b] text-gray-200 p-3 rounded-lg w-56 cursor-pointer border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 appearance-none">
+                    <option>Explorar por Eras</option>
+                    <option>As Primeiras Ideias (1936–1939)</option>
+                    <option>Os Primeiros Computadores (1940–1946)</option>
+                    <option>A Era da Expansão (1947–1950)</option>
+                </select>
+            </div>
+
+            <!-- Coluna 4: Recursos + Links -->
+            <div class="flex flex-col items-start gap-4">
+                <span class="font-semibold uppercase">Recursos</span>
+                <a href="#" class="hover:text-white transition-colors">Glossário</a>
+                <a href="#" class="hover:text-white transition-colors">Biografias</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Preloader -->
+    <div class="preloader fixed inset-0 flex justify-center items-center bg-black z-50 opacity-100 animate-fadeOut">
+        <img src="../../assets/img/logo principal.svg" alt="Logo"
+            class="preloader-logo w-72 opacity-0 animate-logoFade">
+    </div>
+    <script src="../../js/preloader.js"></script>
+</body>
+
+</html>
