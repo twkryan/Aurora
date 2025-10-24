@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="overflow-x-hidden">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>As Primeiras Ideias</title>
-
+    <title>Os Primeiros Computadores</title>
+ 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+ 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,23 +23,23 @@
             },
         }
     </script>
-
+ 
     <!--font oswald-->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+ 
     <!-- Fonte Poppins (opcional) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+ 
     <!-- font playfair -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-
+ 
     <!-- CSS customizado (preloader e animações) -->
     <link rel="stylesheet" href="../../style/StyleLP.css">
-
+ 
     <link rel="icon" href="../../assets/img/logo pequena.svg" type="image/svg+xml" />
 </head>
-
+ 
 <body class="bg-[#1D1B1B] font-poppins overflow-x-hidden box-border">
     <!-- Header e Banner -->
     <header
@@ -49,235 +49,243 @@
             <img src="../../assets/img/logo principal.svg" alt="Logo Aurora"
                 class="h-[2rem] md:h-[2rem] w-[14rem] md:w-[14rem]">
         </div>
-
+ 
         <!-- Logo à direita (menu) -->
         <div>
             <img src="../../assets/img/logoMenu.svg" alt="Logo Menu" class="h-[2rem] md:h-[2rem] w-[2rem] md:w-[2rem]">
         </div>
     </header>
-
-
-
-<!-- Banner principal -->
-<section class="relative h-[calc(100vh-80px)] w-full overflow-hidden">
-    <!-- Imagem de fundo -->
-    <img src="../../assets/img/asprimeirasideias.png" alt="As primeiras ideias"
-        class="absolute inset-0 w-full h-full object-cover">
-
-    <!-- Texto central -->
-    <div class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
-        <h1
-            class="text-white text-center font-playfair text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5rem] font-extrabold leading-tight uppercase">
-            AS PRIMEIRAS <br> IDEIAS
-        </h1>
-        <p
-            class="mt-8 text-[1rem] sm:text-[1.05rem] md:text-[1.1rem] font-poppins text-[rgba(255,255,255,0.75)] leading-relaxed max-w-[40rem]">
-            Envolve os conceitos iniciais de máquinas de <br class="hidden sm:block"> cálculo, lógicas matemáticas e
-            primeiros <br class="hidden sm:block"> protótipos.
-        </p>
-    </div>
-</section>
-
-<!-- Seção dos Cards -->
-<section class="bg-[#1D1B1B] py-20 px-6 md:px-16 text-white mt-[13rem]">
-    <div class="max-w-[90rem] mx-auto flex flex-col items-center gap-16">
-
-        <!-- Primeira fileira de 3 cards -->
-        <div class="flex flex-wrap justify-center gap-10 md:gap-16">
-            <!-- CARD 1 -->
-            <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
-                <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
-                    <img src="../../assets/img/maquinaturing.png"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
-                </div>
-                <h3
-                    class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
-                    Máquina de Turing
-                </h3>
-                <p
-                    class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
-                    Alan Turing propôs um modelo teórico capaz de simular qualquer processo de cálculo: a Máquina de
-                    Turing. <br> Ela não era um computador físico, mas um conceito que mostrou que problemas complexos.
-                </p>
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
-                <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
-                    <img src="../../assets/img/z1ekonrad.png"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
-                </div>
-                <h3
-                    class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-bold font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
-                    Z1 de Konrad Zuse
-                </h3>
-                <p
-                    class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
-                    O Z1, criado por Konrad Zuse, é considerado o primeiro computador binário programável.
-                </p>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
-                <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
-                    <img src="../../assets/img/rapid arithmetical.png"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
-                </div>
-                <h3
-                    class="mt-[0.5rem] text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-bold font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
-                    Rapid Arithmetical Machine
-                </h3>
-                <p
-                    class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1rem] sm:mt-[0.25rem]">
-                    Criada por Vannevar Bush nos anos 1930, foi uma das pioneiras no uso de circuitos e engrenagens para
-                    automatizar cálculos, abrindo caminho para os computadores modernos.
-                </p>
-            </div>
+ 
+ 
+ 
+    <!-- Banner principal -->
+    <section class="relative h-[calc(100vh-80px)] w-full overflow-hidden">
+        <!-- Imagem de fundo -->
+        <img src="../../assets/img/asprimeirasideias.png" alt="Os primeiros C"
+            class="absolute inset-0 w-full h-full object-cover">
+ 
+        <!-- Texto central -->
+        <div class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
+            <h1
+                class="text-white text-center font-playfair text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5rem] font-extrabold leading-tight uppercase">
+                AS PRIMEIRAS <br> IDEIAS
+            </h1>
+            <p
+                class="mt-8 text-[1rem] sm:text-[1.05rem] md:text-[1.1rem] font-poppins text-[rgba(255,255,255,0.75)] leading-relaxed max-w-[40rem]">
+                Envolve os conceitos iniciais de máquinas de <br class="hidden sm:block"> cálculo, lógicas matemáticas e
+                primeiros <br class="hidden sm:block"> protótipos.
+            </p>
         </div>
-
-<!-- CARD GRANDE -->
-<div
-  class="w-full max-w-[76rem] h-auto md:h-[32rem] mx-auto relative overflow-hidden group shadow-lg cursor-pointer mt-[6rem]">
-  <img src="../../assets/img/placacircuito.png" alt="IBM SSEC"
-    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-  <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
-
-  <!-- Conteúdo -->
-  <div class="relative z-10 px-6 sm:px-12 py-10 md:py-16">
-    <h3
-      class="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-oswald uppercase font-bold text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] mb-8 md:mb-12">
-      PLACA DE CIRCUITO IMPRESSO
-    </h3>
-
-    <p
-      class="text-[#FFF] text-opacity-50 font-Montserrat text-[0.9rem] sm:text-[1rem] leading-relaxed max-w-[60rem]">
-      A invenção da placa de circuito impresso permitiu organizar e interligar componentes eletrônicos em uma base
-      única, facilitando a montagem de circuitos complexos e tornando os dispositivos mais compactos e confiáveis.
-    </p>
-  </div>
-</div>
-
-
-        <!-- Segunda fileira de 3 cards -->
-        <div class="flex flex-wrap justify-center gap-10 md:gap-16">
-            <!-- CARD 1 -->
-            <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
-                <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
-                    <img src="../../assets/img/Modelo K.png"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+    </section>
+ 
+    <!-- Seção dos Cards -->
+    <section class="bg-[#1D1B1B] py-20 px-6 md:px-16 text-white mt-[13rem]">
+        <div class="max-w-[90rem] mx-auto flex flex-col items-center gap-16">
+ 
+            <!-- Primeira fileira de 3 cards -->
+            <div class="flex flex-wrap justify-center gap-10 md:gap-16">
+                <!-- CARD 1 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
+                    <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
+                        <img src="../../assets/img/maquinaturing.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                    </div>
+                    <h3
+                        class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                        Máquina de Turing
+                    </h3>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
+                        Alan Turing propôs um modelo teórico capaz de simular qualquer processo de cálculo: a Máquina de
+                        Turing. <br> Ela não era um computador físico, mas um conceito que mostrou que problemas
+                        complexos.
+                    </p>
                 </div>
-                <h3
-                    class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
-                    Modelo K
-                </h3>
-                <p
-                    class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
-                    George Stibitz construiu o Modelo K, uma máquina experimental baseada em relés.
-                </p>
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
-                <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
-                    <img src="../../assets/img/z2reallife.png"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+ 
+                <!-- CARD 2 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
+                    <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
+                        <img src="../../assets/img/z1ekonrad.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                    </div>
+                    <h3
+                        class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-bold font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                        Z1 de Konrad Zuse
+                    </h3>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
+                        O Z1, criado por Konrad Zuse, é considerado o primeiro computador binário programável.
+                    </p>
                 </div>
-                <h3
-                    class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
-                    Z2 de Konrad Zuse
-                </h3>
-                <p
-                    class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
-                    O Z2, criado por Konrad Zuse em 1939, foi um passo fundamental na evolução dos seus primeiros
-                    computadores.
-                </p>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
-                <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
-                    <img src="../../assets/img/abcreallife.png"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+ 
+                <!-- CARD 3 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
+                    <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
+                        <img src="../../assets/img/rapid arithmetical.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                    </div>
+                    <h3
+                        class="mt-[0.5rem] text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-bold font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                        Rapid Arithmetical Machine
+                    </h3>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1rem] sm:mt-[0.25rem]">
+                        Criada por Vannevar Bush nos anos 1930, foi uma das pioneiras no uso de circuitos e engrenagens
+                        para
+                        automatizar cálculos, abrindo caminho para os computadores modernos.
+                    </p>
                 </div>
-                <h3
-                    class="mt-[0.5rem] text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
-                    ABC
-                </h3>
-                <p
-                    class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
-                    Desenvolvido por John Atanasoff e Clifford Berry, é considerado o primeiro computador digital
-                    eletrônico. Marcou o início da era dos computadores eletrônicos.
-                </p>
             </div>
+ 
+            <!-- CARD GRANDE -->
+            <div
+                class="w-full max-w-[76rem] h-auto md:h-[32rem] mx-auto relative overflow-hidden group shadow-lg cursor-pointer mt-[6rem]">
+                <img src="../../assets/img/placacircuito.png" alt="IBM SSEC"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
+ 
+                <!-- Conteúdo -->
+                <div class="relative z-10 px-6 sm:px-12 py-10 md:py-16">
+                    <h3
+                        class="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-oswald uppercase font-bold text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] mb-8 md:mb-12">
+                        PLACA DE CIRCUITO IMPRESSO
+                    </h3>
+ 
+                    <p
+                        class="text-[#FFF] text-opacity-50 font-Montserrat text-[0.9rem] sm:text-[1rem] leading-relaxed max-w-[60rem]">
+                        A invenção da placa de circuito impresso permitiu organizar e interligar componentes eletrônicos
+                        em uma base
+                        única, facilitando a montagem de circuitos complexos e tornando os dispositivos mais compactos e
+                        confiáveis.
+                    </p>
+                </div>
+            </div>
+ 
+ 
+            <!-- Segunda fileira de 3 cards -->
+            <div class="flex flex-wrap justify-center gap-10 md:gap-16 mt-[6rem]">
+                <!-- CARD 1 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
+                    <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
+                        <img src="../../assets/img/Modelo K.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                    </div>
+                    <h3
+                        class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                        Modelo K
+                    </h3>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
+                        George Stibitz construiu o Modelo K, uma máquina experimental baseada em relés.
+                    </p>
+                </div>
+ 
+                <!-- CARD 2 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
+                    <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
+                        <img src="../../assets/img/z2reallife.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                    </div>
+                    <h3
+                        class="mt-4 text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                        Z2 de Konrad Zuse
+                    </h3>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
+                        O Z2, criado por Konrad Zuse em 1939, foi um passo fundamental na evolução dos seus primeiros
+                        computadores.
+                    </p>
+                </div>
+ 
+                <!-- CARD 3 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[22rem]">
+                    <div class="relative overflow-hidden group shadow-lg cursor-pointer h-[16rem] sm:h-[18rem]">
+                        <img src="../../assets/img/abcreallife.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                    </div>
+                    <h3
+                        class="mt-[0.5rem] text-[1.6rem] sm:text-[1.8rem] md:text-[2rem] font-oswald font-bold uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+                        ABC
+                    </h3>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.9rem] sm:text-[0.95rem] mt-[1.5rem] sm:mt-[2.5rem]">
+                        Desenvolvido por John Atanasoff e Clifford Berry, é considerado o primeiro computador digital
+                        eletrônico. Marcou o início da era dos computadores eletrônicos.
+                    </p>
+                </div>
+            </div>
+            <!-- Nova fileira com 2 cards -->
+            <div class="flex flex-wrap justify-center gap-8 md:gap-[13rem]">
+                <!-- CARD 1 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[30rem] w-full">
+                    <div
+                        class="relative overflow-hidden group shadow-lg cursor-pointer h-[28rem] sm:h-[38rem] md:h-[45rem]">
+                        <img src="../../assets/img/enigmaeabomba.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                        <h3
+                            class="absolute bottom-[1.5rem] sm:bottom-[2rem] md:bottom-[2.5rem] left-[1rem] sm:left-[1.5rem] md:left-[2rem] text-[1.6rem] sm:text-[2rem] md:text-[2.8rem] font-oswald font-bold uppercase text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] leading-tight">
+                            Enigma e a Bomba Criptológica de Turing
+                        </h3>
+                    </div>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.85rem] sm:text-[0.9rem] md:text-[0.95rem] mt-4 sm:mt-5 md:mt-6 leading-relaxed">
+                        Alan Turing propôs um modelo teórico capaz de simular qualquer processo de cálculo:
+                        a Máquina de Turing. Ela não era um computador físico, mas um conceito que mostrou que problemas
+                        complexos.
+                    </p>
+                </div>
+ 
+                <!-- CARD 2 -->
+                <div class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] max-w-[30rem] w-full">
+                    <div
+                        class="relative overflow-hidden group shadow-lg cursor-pointer h-[28rem] sm:h-[38rem] md:h-[45rem]">
+                        <img src="../../assets/img/louisgrandao.png"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+                        </div>
+                        <h3
+                            class="absolute bottom-[3rem] sm:bottom-[4.5rem] md:bottom-[5.5rem] left-[1.2rem] sm:left-[2rem] md:left-[3rem] text-[1.8rem] sm:text-[2.3rem] md:text-[3rem] font-oswald font-bold uppercase text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] leading-tight">
+                            Louis Pierre Couffignal
+                        </h3>
+                    </div>
+                    <p
+                        class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.85rem] sm:text-[0.9rem] md:text-[0.95rem] mt-4 sm:mt-5 md:mt-6 leading-relaxed">
+                        A Máquina de Turing, concebida pelo brilhante matemático britânico
+                        Alan Turing em 1936, é a ideia mais fundamental por trás de todos os computadores que existem
+                        hoje.
+                    </p>
+                </div>
+            </div>
+ 
+ 
+ 
+ 
+ 
         </div>
- <!-- Nova fileira com 2 cards -->
-<div class="flex flex-wrap justify-center gap-[11rem] md:gap-[11rem] gap-8">
-  <!-- CARD 1 -->
-  <div
-    class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] md:min-w-[20rem] max-w-[32rem] w-full sm:w-auto">
-    <div
-      class="relative overflow-hidden group shadow-lg cursor-pointer h-[28rem] sm:h-[38rem] md:h-[45rem] transition-all duration-500">
-      <img src="../../assets/img/enigmaeabomba.png"
-        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
-
-      <!-- Título -->
-      <h3
-        class="absolute bottom-[1.5rem] sm:bottom-[2rem] md:bottom-[2.5rem] left-[1rem] sm:left-[1.5rem] md:left-[2rem] text-[1.6rem] sm:text-[2rem] md:text-[2.8rem] font-oswald font-bold uppercase text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] leading-tight">
-        Enigma e a Bomba Criptológica de Turing
-      </h3>
-    </div>
-    <p
-      class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.85rem] sm:text-[0.9rem] md:text-[0.95rem] mt-4 sm:mt-5 md:mt-6 leading-relaxed">
-      Alan Turing propôs um modelo teórico capaz de simular qualquer processo de cálculo:
-       a Máquina de Turing. Ela não era um computador físico, mas um conceito que mostrou que problemas complexos.
-    </p>
-  </div>
-
-  <!-- CARD 2 -->
-  <div
-    class="flex flex-col flex-1 min-w-[18rem] sm:min-w-[20rem] md:min-w-[20rem] max-w-[32rem] w-full sm:w-auto">
-    <div
-      class="relative overflow-hidden group shadow-lg cursor-pointer h-[28rem] sm:h-[38rem] md:h-[45rem] transition-all duration-500">
-      <img src="../../assets/img/louisgrandao.png"
-        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
-      <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500"></div>
-
-      <!-- Título -->
-      <h3
-        class="absolute bottom-[3rem] sm:bottom-[4.5rem] md:bottom-[5.5rem] left-[1.2rem] sm:left-[2rem] md:left-[3rem] text-[1.8rem] sm:text-[2.3rem] md:text-[3rem] font-oswald font-bold uppercase text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] leading-tight">
-        Louis Pierre Couffignal
-      </h3>
-    </div>
-    <p
-      class="text-[rgba(255,255,255,0.5)] font-poppins text-[0.85rem] sm:text-[0.9rem] md:text-[0.95rem] mt-4 sm:mt-5 md:mt-6 leading-relaxed">
-      A Máquina de Turing, concebida pelo brilhante matemático britânico
-       Alan Turing em 1936, é a ideia mais fundamental por trás de todos os computadores que existem hoje.
-
-    </p>
-  </div>
-</div>
-
-
-
-
-    </div>
-</section>
-
-
-
-
-
+    </section>
+ 
+ 
+ 
+ 
+ 
     <!-- Footer -->
     <footer class="bg-[#282525] text-gray-300 py-12">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-8">
-
+ 
             <!-- Coluna 1: Logo + Links -->
             <div class="flex flex-col items-start gap-4">
                 <div class="w-[14rem] rounded-md flex items-center justify-center">
@@ -286,7 +294,7 @@
                 <a href="#" class="hover:text-white transition-colors">Início</a>
                 <a href="#" class="hover:text-white transition-colors">Sobre o Projeto</a>
             </div>
-
+ 
             <!-- Coluna 2: Explorar por Temas -->
             <div class="flex flex-col items-start gap-2">
                 <select
@@ -300,7 +308,7 @@
                     <option>Tecnologias, Pessoas e Comunidade</option>
                 </select>
             </div>
-
+ 
             <!-- Coluna 3: Explorar por Eras -->
             <div class="flex flex-col items-start gap-2">
                 <select
@@ -311,18 +319,18 @@
                     <option>A Era da Expansão (1947–1950)</option>
                 </select>
             </div>
-
+ 
             <!-- Coluna 4: Recursos + Links -->
             <div class="flex flex-col items-start gap-4">
                 <span class="font-semibold uppercase">Recursos</span>
                 <a href="#" class="hover:text-white transition-colors">Glossário</a>
                 <a href="#" class="hover:text-white transition-colors">Biografias</a>
             </div>
-
+ 
         </div>
     </footer>
-
-
+ 
+ 
     <!-- Preloader -->
     <div class="preloader fixed inset-0 flex justify-center items-center bg-black z-50 opacity-100 animate-fadeOut">
         <img src="../../assets/img/logo principal.svg" alt="Logo"
@@ -330,5 +338,5 @@
     </div>
     <script src="../../js/preloader.js"></script>
 </body>
-
+ 
 </html>
