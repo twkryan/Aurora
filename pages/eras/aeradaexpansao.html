@@ -23,7 +23,11 @@
             },
         }
     </script>
- 
+    <!--Acessibilidade-->
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+
+    <!--Barba JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!--font oswald-->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
  
@@ -41,25 +45,126 @@
 </head>
  
 <body class="bg-[#1D1B1B] font-poppins overflow-x-hidden box-border">
-    <!-- Header e Banner -->
-    <header
-        class="w-full bg-[#1D1B1B] flex items-center justify-between px-6 md:px-16 py-4 z-20 h-[5rem] md:h-[5rem] relative">
-        <!-- Logo central -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 pt-[2rem] pb-[1.57663rem]">
-            <img src="../../assets/img/logo principal.svg" alt="Logo Aurora"
-                class="h-[2rem] md:h-[2rem] w-[14rem] md:w-[14rem]">
+    <div id="main-header-wrapper" class="fixed top-0 left-0 w-full z-40 p-6 flex justify-between items-center">
+  
+  <button id="menu-toggle" class="menu-icon-button">
+    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="bar1" d="M20.6667 7.33333H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="bar2" d="M26 2H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="bar3" d="M26 12.6667H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path id="bar4" d="M20.6667 18H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <a href="/" class="logo-container">
+    <svg class="logo-aoa" width="67" height="33" viewBox="0 0 67 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.7208 19.7563C18.6042 11.4653 23.9047 3.76403 31.5583 2.55767C39.2072 1.35215 46.3104 7.09057 47.4262 15.3765C40.1397 34.3321 43.7771 32.7135 35.95 32.7354C34.9972 32.738 34.1161 32.7534 33.2995 32.7716L27.8532 32.7801C23.3724 32.4224 22.2434 30.2293 19.7208 19.7563Z" fill="#FCFCFC"/>
+      <path d="M12.2769 0L15.8881 0.0508744L21.8061 17.0048L23.686 25.3094L28.5735 32.4277H23.686C22.9958 30.1715 21.5906 26.8402 20.7359 24.473L14.504 7.06113L14.0597 5.96764C12.8293 8.24769 10.5905 15.0892 9.59172 17.7392C7.75705 22.6084 5.87003 27.5311 4.04582 32.4057L0 32.4277C1.23289 28.7722 2.9859 24.5381 4.3574 20.8835C6.92996 13.8921 9.56994 6.93046 12.2769 0Z" fill="#FCFCFC"/>
+      <path d="M54.7231 0L51.1119 0.0508744L45.1939 17.0048L43.314 25.3094L38.4265 32.4277H43.314C44.0042 30.1715 45.4094 26.8402 46.2641 24.473L52.496 7.06113L52.9403 5.96764C54.1707 8.24769 56.4095 15.0892 57.4083 17.7392C59.2429 22.6084 61.13 27.5311 62.9542 32.4057L67 32.4277C65.7671 28.7722 64.0141 24.5381 62.6426 20.8835C60.07 13.8921 57.4301 6.93046 54.7231 0Z" fill="#FCFCFC"/>
+      <defs>
+      </defs>
+    </svg>
+
+    <svg class="logo-aurora" width="229" height="32" viewBox="0 0 229 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g class="letras-escondidas">
+      <path class="u" d="M60.7722 0.29425L64.6292 0.303827L64.6204 3.94695C64.5701 9.09412 64.7264 14.2452 64.6563 19.3981C64.6056 23.117 63.5889 26.7117 60.6442 29.1267C56.5387 32.4935 49.0954 32.4808 45.314 28.588C43.9716 27.1868 43.0276 25.4326 42.5856 23.5162C41.9379 20.8154 42.1382 16.0086 42.1508 13.0929L42.1973 0.342611L45.98 0.324762L45.9863 13.1643C45.9627 19.0912 44.8374 27.6723 52.9512 27.7921C61.8556 27.9238 60.7595 19.6037 60.7536 13.3517L60.7722 0.29425Z" fill="#FCFCFC"/>
+      <path class="r1" d="M82.7506 0.375659C86.4741 0.337306 95.7634 -0.266309 98.5459 1.34104C106.751 6.08114 105.034 15.917 96.2396 18.6701C98.8742 22.845 101.786 26.825 104.35 31.0565L99.7058 31.0473C96.9842 26.3608 92.7337 20.2631 89.6846 15.5753C92.4418 15.4903 95.9857 15.696 98.1069 13.7648C99.2186 12.7585 99.8736 11.3198 99.9146 9.79485C100.124 2.62106 91.1365 4.13688 86.5527 4.204L86.5417 31.0926L82.6217 31.1815C82.68 21.0223 82.5021 10.5101 82.7506 0.375659Z" fill="#FCFCFC"/>
+      <path class="r2" d="M168.282 0.410013C174.649 0.280135 184.284 -1.15199 186.629 6.98324C187.304 9.30971 187.064 11.8166 185.963 13.9631C184.441 16.8662 182.281 17.8934 179.432 18.7481L187.671 31.0198L183.089 31.0333C181.106 28.2409 179.161 25.1051 177.2 22.2539C176.297 20.9399 173.441 16.9577 172.889 15.757C173.351 15.4401 174.661 15.5085 175.341 15.4789C177.494 15.383 180.009 15.1847 181.353 13.6144C186.454 7.65225 180.281 3.23595 174.332 4.14291C173.381 4.28804 170.643 4.18083 169.728 4.1926C169.374 12.313 169.772 22.7333 169.694 31.0965L165.797 31.0446L165.754 0.478883L168.282 0.410013Z" fill="#FCFCFC"/>
+      </g>
+      <g class="letras-frente">
+      <path class="a1" d="M12.3875 0.262634L16.0311 0.310995L28.0721 31.0485L23.8154 30.9678C23.119 28.8231 21.785 25.7766 20.9226 23.5264L14.6346 6.97488L14.1863 5.93541C12.9448 8.1028 10.6859 14.6063 9.6781 17.1254C7.82691 21.7539 5.92289 26.4334 4.08226 31.0672L0 31.0881C1.24399 27.6132 3.01278 23.5883 4.39664 20.1143C6.99237 13.4683 9.65612 6.85066 12.3875 0.262634Z" fill="#FCFCFC"/>
+      <g class="o">
+      <path d="M132.295 0.167542C140.71 -1.09506 148.524 4.91505 149.752 13.5933C150.979 22.272 145.156 30.3345 136.743 31.6045C128.324 32.8754 120.502 26.8644 119.273 18.1805C118.044 9.49696 123.876 1.43102 132.295 0.167542Z" fill="#FCFCFC"/>
+      <path d="M133.136 3.95929C139.465 3.18743 145.216 7.81728 146.026 14.3373C146.836 20.8569 142.403 26.8335 136.091 27.733C129.69 28.6452 123.797 23.9958 122.975 17.3846C122.154 10.7739 126.719 4.74161 133.136 3.95929Z" fill="url(#paint1_linear_2565_185)" fill-opacity="0.23"/>
+      </g>
+      <path class="a2" d="M213.232 0.307459L216.817 0.293945C220.967 9.78854 225.175 21.2518 229 31.0201L224.903 31.0602C221.653 23.4484 218.488 14.7949 215.447 7.02667L214.914 6.0465C213.78 8.40479 212.169 13.0673 211.13 15.7777L205.133 31.1404L201.029 31.0728C204.511 21.301 209.288 9.97595 213.232 0.307459Z" fill="#FCFCFC"/>
+      </g>
+      <defs>
+      <linearGradient id="paint1_linear_2565_185" x1="134.5" y1="3.87524" x2="134.5" y2="27.8473" gradientUnits="userSpaceOnUse">
+      <stop offset="0.0625"/>
+      <stop offset="0.605769" stop-color="#BBB8B8"/>
+      <stop offset="0.894231"/>
+      </linearGradient>
+      </defs>
+    </svg>
+  </a>
+</div>
+
+<nav id="side-menu" class="side-menu">
+  <div class="menu-content">
+    
+    <div class="menu-header">
+      <button class="close-menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 6L18 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+      <div class="language-selector">
+        <img src="bandeira_eua.png" alt="English" class="flag-icon">
         </div>
- 
-        <!-- Logo à direita (menu) -->
-        <div>
-            <img src="../../assets/img/logoMenu.svg" alt="Logo Menu" class="h-[2rem] md:h-[2rem] w-[2rem] md:w-[2rem]">
-        </div>
-    </header>
+    </div>
+
+    <div class="search-bar-wrapper">
+      <input type="text" placeholder="Buscar" class="search-input">
+      <button class="search-button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+<ul class="main-links">
+  <li><a href="#" class="menu-link">INÍCIO</a></li>
+  
+  <li class="dropdown-item">
+    <a href="#" class="menu-link has-dropdown" data-dropdown="temas">
+      EXPLORAR POR TEMAS
+      <span class="arrow-svg">
+        <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.00006L7.92308 7.00006L16 1.00006" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+    <ul class="submenu" id="dropdown-temas">
+      <li><a href="../temas/fundamentos.html">Fundamentos Teóricos e Conceituais</a></li>
+      <li><a href="../temas/aeletromecanica.html">A Era Eletromecânica</a></li>
+      <li><a href="../temas/computacaoparafins.html">Computação para Fins Específicos</a></li>
+      <li><a href="../temas/arevolucao.html">A Revolução Eletrônica: Válvulas</a></li>
+      <li><a href="../temas/nascimentoSoftware.html">O Nascimento do Software Moderno</a></li>
+      <li><a href="../temas/tecnologias.html">Tecnologias, Pessoas e Comunidade</a></li>
+    </ul>
+  </li>
+  
+  <li class="dropdown-item">
+    <a href="#" class="menu-link has-dropdown" data-dropdown="eras">
+      EXPLORAR POR ERAS
+      <span class="arrow-svg">
+        <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.00006L7.92308 7.00006L16 1.00006" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </a>
+    <ul class="submenu" id="dropdown-eras">
+      <li><a href="./asprimeirasideias.html">As Primeiras Ideias (1936–1939)</a></li>
+      <li><a href="./osprimeiroscomputadores.html">Os Primeiros Computadores (1940–1946)</a></li>
+      <li><a href="./aeradaexpansao.html">A Era da Expansão (1947–1950)</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#" class="menu-link">QUIZ</a></li>
+</ul>
+    <div class="menu-footer">
+      <a href="#" class="about-link">SOBRE NÓS</a>
+    </div>
+
+  </div>
+</nav>
+
+<div id="menu-overlay" class="menu-overlay"></div>
+</nav>
  
  
  
     <!-- Banner principal -->
-    <section class="relative h-[calc(100vh-80px)] w-full overflow-hidden">
+    <section class="relative h-[calc(110vh-80px)] w-full overflow-hidden">
         <!-- Imagem de fundo -->
         <img src="../../assets/img/aeradaexpansao.png" alt="Os primeiros C"
             class="absolute inset-0 w-full h-full object-cover">
@@ -323,6 +428,198 @@
             class="preloader-logo w-72 opacity-0 animate-logoFade">
     </div>
     <script src="../../js/preloader.js"></script>
+    <script> const slides = document.querySelectorAll('.slide');
+    let index = 0;
+    function changeSlide() {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    setInterval(changeSlide, 3000);
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- SELETORES GLOBAIS ---
+    const headerWrapper = document.querySelector("#main-header-wrapper"); 
+    const logoAURORA = document.querySelector(".logo-aurora");
+    const logoAOA = document.querySelector(".logo-aoa");
+    const menuToggle = document.querySelector("#menu-toggle");
+    const closeMenuButton = document.querySelector(".close-menu");
+    const sideMenu = document.querySelector("#side-menu");
+    const body = document.body;
+    const menuOverlay = document.querySelector("#menu-overlay");
+
+    // --- SELETORES DO LOGO ---
+    const a1 = logoAURORA.querySelector(".a1");
+    const a2 = logoAURORA.querySelector(".a2");
+    const u = logoAURORA.querySelector(".u");
+    const r1 = logoAURORA.querySelector(".r1");
+    const r2 = logoAURORA.querySelector(".r2");
+
+    // --- SELETORES DO ÍCONE DO MENU ---
+    const bar1 = menuToggle.querySelector("#bar1");
+    const bar2 = menuToggle.querySelector("#bar2");
+    const bar3 = menuToggle.querySelector("#bar3");
+    const bar4 = menuToggle.querySelector("#bar4");
+
+    // --- 1. CONFIGURAÇÃO INICIAL (Logo) ---
+    const offset = 20;
+    const a1_orig_x = 12.4;
+    const a2_orig_x = 213.2;
+    const o_aurora_x = 134.5;
+    const u_orig_x = 53;
+    const r1_orig_x = 93;
+    const r2_orig_x = 176;
+
+    const a1_squished_x = (o_aurora_x - 21.2) - a1_orig_x;
+    const a2_squished_x = (o_aurora_x + 21.2) - a2_orig_x;
+    const u_hidden_x = o_aurora_x - u_orig_x;
+    const r1_hidden_x = o_aurora_x - r1_orig_x;
+    const r2_hidden_x = o_aurora_x - r2_orig_x;
+    
+    gsap.set(a1, { x: a1_squished_x });
+    gsap.set(a2, { x: a2_squished_x });
+    gsap.set([u, r1, r2], { opacity: 0, scale: 0.3, transformOrigin: "center" });
+    gsap.set(u, { x: u_hidden_x });
+    gsap.set(r1, { x: r1_hidden_x });
+    gsap.set(r2, { x: r2_hidden_x });
+    gsap.set(logoAOA, { opacity: 1, x: offset }); 
+    gsap.set(logoAURORA, { opacity: 0 });
+
+    // --- 2. TIMELINE DO LOGO ---
+    const hoverTimeline = gsap.timeline({ paused: true });
+    hoverTimeline
+      .to(logoAOA, { opacity: 0, duration: 0.2, ease: "power1.in" })
+      .to(logoAURORA, { opacity: 1, duration: 0.2, ease: "power1.out" }, "<") 
+      .to([a1, a2], { x: 0, duration: 0.7, ease: "power3.out" }, "-=0.1")
+      .to([u, r1, r2], {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.6,
+        ease: "back.out(1.4)",
+        stagger: 0.1
+      }, "-=0.6"); 
+
+    // --- 3. TIMELINE DO ÍCONE DO MENU (Hambúrguer <-> X) ---
+    const menuIconTimeline = gsap.timeline({ paused: true })
+      .to([bar1, bar4], { opacity: 0, duration: 0.15 }, 0) 
+      .to(bar2, { y: 8, rotation: 45, duration: 0.3, ease: "power2.inOut" }, 0)
+      .to(bar3, { y: -8, rotation: -45, duration: 0.3, ease: "power2.inOut" }, 0);
+      
+    
+    // --- 4. FUNÇÕES DO MENU & OVERLAY ---
+    function openMenu() {
+      sideMenu.classList.add("is-open");
+      menuOverlay.classList.add("is-open");
+      body.classList.add("menu-open");
+      menuIconTimeline.play();
+    }
+
+    function closeMenu() {
+      sideMenu.classList.remove("is-open");
+      menuOverlay.classList.remove("is-open");
+      body.classList.remove("menu-open");
+      menuIconTimeline.reverse();
+    }
+
+    // --- 5. LISTENERS DE EVENTOS ---
+    
+    // Logo Hover/Touch
+    if (headerWrapper) {
+      headerWrapper.addEventListener("mouseenter", () => { hoverTimeline.play(); });
+      headerWrapper.addEventListener("mouseleave", () => { hoverTimeline.reverse(); });
+      headerWrapper.addEventListener("touchstart", () => { hoverTimeline.timeScale(2).play(); });
+      headerWrapper.addEventListener("touchend", () => {
+        setTimeout(() => { hoverTimeline.timeScale(1).reverse(); }, 800);
+      });
+    }
+
+    // Abertura/Fechamento do Menu
+    menuToggle.addEventListener("click", () => {
+      if (sideMenu.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    closeMenuButton.addEventListener("click", closeMenu);
+    
+    // Fechar ao clicar na overlay
+    if (menuOverlay) {
+        menuOverlay.addEventListener("click", closeMenu);
+    }
+
+    // Fechar com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && sideMenu.classList.contains("is-open")) {
+        closeMenu();
+      }
+    });
+
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    // ------------------------------------
+    // Lógica do Dropdown (Submenus)
+    // ------------------------------------
+    const dropdownLinks = document.querySelectorAll('.menu-link.has-dropdown');
+
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Previne que o link navegue
+
+            const dropdownId = link.getAttribute('data-dropdown');
+            const submenu = document.getElementById(`dropdown-${dropdownId}`);
+            const arrowSvg = link.querySelector('.arrow-svg');
+
+            if (!submenu || !arrowSvg) return;
+
+            // Fecha outros submenus, exceto o que foi clicado
+            document.querySelectorAll('.submenu.is-open').forEach(openSubmenu => {
+                if (openSubmenu !== submenu) {
+                    openSubmenu.classList.remove('is-open');
+                    // Gira a seta de volta nos outros menus
+                    openSubmenu.previousElementSibling.querySelector('.arrow-svg').classList.remove('rotated');
+                }
+            });
+
+            // Alterna a classe no submenu e na seta
+            submenu.classList.toggle('is-open');
+            arrowSvg.classList.toggle('rotated');
+        });
+    });
+
+    // ------------------------------------
+    // Lógica de Abertura/Fechamento do Menu (Mantido do seu código)
+    // ------------------------------------
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+    const closeMenu = document.querySelector('.close-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const body = document.body;
+
+    function toggleMenu(open) {
+        if (open) {
+            sideMenu.classList.add('is-open');
+            menuOverlay.classList.add('is-open');
+            body.classList.add('menu-open');
+        } else {
+            sideMenu.classList.remove('is-open');
+            menuOverlay.classList.remove('is-open');
+            body.classList.remove('menu-open');
+            
+            // **Feche todos os submenus ao fechar o menu principal**
+            document.querySelectorAll('.submenu.is-open').forEach(openSubmenu => {
+                openSubmenu.classList.remove('is-open');
+                openSubmenu.previousElementSibling.querySelector('.arrow-svg').classList.remove('rotated');
+            });
+        }
+    }
+
+    menuToggle.addEventListener('click', () => toggleMenu(true));
+    closeMenu.addEventListener('click', () => toggleMenu(false));
+    menuOverlay.addEventListener('click', () => toggleMenu(false));
+});</script>
 </body>
  
 </html>

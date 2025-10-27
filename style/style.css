@@ -85,3 +85,292 @@ body{
     background: #1D1B1B;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- ESTILOS GERAIS --- */
+body {
+  font-family: 'Oswald', sans-serif; 
+  color: #FCFCFC; 
+  transition: background-color 0.3s ease;
+}
+
+body.menu-open {
+  overflow: hidden; /* Previne scroll no body quando o menu está aberto */
+}
+
+/* ---------------------------------- */
+/* LOGO ANIMADO AOA / AURORA          */
+/* ---------------------------------- */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 229px; 
+  height: 33px;
+  text-decoration: none; 
+}
+.logo-aoa,
+.logo-aurora {
+  position: absolute;
+}
+.logo-aurora g, 
+.logo-aurora path {
+  position: relative;
+}
+.letras-frente { z-index: 10; }
+.letras-escondidas { z-index: 5; }
+
+/* ---------------------------------- */
+/* ÍCONE DO MENU (Hambúrguer)         */
+/* ---------------------------------- */
+.menu-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 50; 
+  transition: transform 0.3s;
+}
+
+/* ---------------------------------- */
+/* OVERLAY DE FUNDO                   */
+/* ---------------------------------- */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente escuro */
+  z-index: 9000; 
+  visibility: hidden; 
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0s 0.4s;
+}
+
+.menu-overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* ---------------------------------- */
+/* PAINEL DE MENU LATERAL (Side Nav)  */
+/* ---------------------------------- */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%; 
+  max-width: 400px; 
+  background-color: #1A1A1A; /* Cor de fundo confirmada */
+  z-index: 9999;
+  
+  transform: translateX(-100%); 
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0); 
+  box-shadow: none; 
+  overflow-y: auto;
+}
+
+.side-menu.is-open {
+  transform: translateX(0); 
+}
+
+/* Conteúdo do Menu */
+.menu-content {
+  /* Mantém o padding lateral para o limite de "metade do menu" */
+  padding: 45px 40px 30px 40px; 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header do Menu (X e Bandeira) */
+.menu-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 50px; 
+}
+.close-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  /* O SVG agora define o visual, apenas ajustamos o tamanho aqui se necessário */
+}
+.close-menu svg {
+    width: 20px; /* Tamanho do SVG ajustado (menor e mais sutil) */
+    height: 20px;
+    vertical-align: middle;
+}
+.flag-icon {
+  width: 30px; 
+  height: 20px;
+}
+
+/* ---------------------------------- */
+/* BARRA DE BUSCA         */
+/* ---------------------------------- */
+.search-bar-wrapper {
+  display: flex;
+  align-items: center; /* Ajuste para centralizar o botão verticalmente */
+  /* Borda sutil nos 4 lados */
+  border: 1px solid rgba(252, 252, 252, 0.2); 
+  border-radius: 50px; /* Borda arredondada no wrapper */
+  padding: 0; 
+  margin-bottom: 70px; 
+  height: 48px; 
+  overflow: hidden; 
+}
+.search-input {
+  flex-grow: 1;
+  background: none; 
+  border: none;
+  color: #FCFCFC;
+  font-size: 0.95rem; /* Levemente menor que 1rem */
+  outline: none;
+  /* Adicionado padding-left para o visual */
+  padding: 10px 15px; 
+  /* Espaço entre a parte branca do botão e o input */
+  margin-right: 5px; 
+}
+.search-input::placeholder {
+  color: rgba(252, 252, 252, 0.5); 
+  font-weight: 300; 
+}
+.search-button {
+  background: #FCFCFC; 
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  /* Padding ajustado para alargar o botão */
+  padding: 12px 15px; 
+  flex-shrink: 0; 
+  /* Aplicando o arredondamento apenas na ponta direita, se necessário */
+  border-radius: 0 4px 4px 0;
+}
+.search-button svg {
+  vertical-align: middle; 
+  stroke: #1A1A1A !important; 
+}
+
+
+/* Links Principais (Diminuição da Fonte e Alinhamento) */
+.main-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; 
+  /* Garante que os links não ultrapassem a metade da largura se a largura for menor */
+  max-width: 50%; /* Se o menu for muito largo, limita o conteúdo */
+}
+.main-links li {
+  margin-bottom: 40px; /* Espaçamento vertical ajustado */
+}
+.menu-link {
+  color: #FCFCFC;
+  text-decoration: none;
+  font-size: 1,3rem; /* Fonte diminuída (antes 2rem) */
+  font-weight: 500; 
+  display: block;
+  
+  line-height: 1; 
+  /* Garantindo o alinhamento esquerdo (padrão) */
+  text-align: left; 
+  white-space: nowrap; /* Impede quebras de linha se a palavra for longa */
+}
+.menu-link.has-dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Ajustado para permitir que o texto quebre, mas a seta fique no final */
+    white-space: normal; 
+    line-height: 1.2; /* Permite quebras de linha mais naturais para os links longos */
+}
+
+/* Container do SVG para controle da rotação */
+.arrow-svg {
+    display: flex; /* Garante que o SVG esteja centralizado */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Impede que o container encolha */
+    margin-left: 15px; /* Adiciona um pequeno espaço entre o texto e a seta */
+}
+
+/* Rotação da seta quando o dropdown está aberto */
+.arrow-svg.rotated {
+    transform: rotate(180deg);
+}
+
+/* Oculta os submenus por padrão */
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0; /* Truque para animação de slide-down */
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, margin-top 0.4s ease;
+}
+
+/* Estilo para quando o submenu estiver aberto */
+.submenu.is-open {
+    max-height: 500px; /* Valor grande o suficiente para conter todos os itens */
+    margin-top: 30px; /* Espaço entre o link principal e o submenu */
+}
+
+/* Estilo dos links do submenu */
+.submenu li a {
+    display: block;
+    color: #FCFCFC;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    /* Fonte muito menor e mais fina para diferenciar do menu principal */
+    font-size: 1rem; 
+    font-weight: 300; 
+    padding: 5px 5;
+    opacity: 0.7; /* Links de submenu mais discretos */
+    
+    transition: opacity 0.3s ease;
+}
+
+.submenu li a:hover {
+    opacity: 1;
+}
+
+/* Removemos as regras antigas para a seta de texto */
+.arrow-down::after {
+    display: none;
+}
+
+/* Rodapé/Link Sobre Nós */
+.menu-footer {
+  margin-top: auto; 
+  padding-top: 50px; 
+  text-align: center;
+}
+.about-link {
+  color: #FCFCFC;
+  opacity: 1; 
+  text-decoration: none;
+  font-size: 1.2rem; /* Levemente diminuído */
+  text-transform: uppercase;
+  letter-spacing: 0.15em; 
+  font-weight: 500; 
+}
+
+
+@media (min-width: 768px) {
+    .side-menu {
+        max-width: 33vw; 
+    }
+}
