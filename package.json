@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "daisyui": "^5.3.10",
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./style/input.css -o ./style/output.css",
+    "dev": "npm run build -- --watch"
+}
+}

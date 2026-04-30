@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computação para Fins Específicos: Guerra e Ciência</title>
+  <link href="../../style/output.css" rel="stylesheet">
+  <link rel="icon" href="../../assets/img/logo pequena.svg" type="image/svg+xml" />
+  <!--acessibilidade-->
+  <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"
+    defer></script>
+  <!--Gsap-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="../../style/MenuEHeader.css">
+  <style>
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        } 
+
+        body {
+            top: 0px !important;
+            padding-top: 0px !important;
+            margin-top: 0px !important;
+        }
+
+        html {
+            top: 0px !important;
+            padding-top: 0px !important;
+            margin-top: 0px !important;
+        }
+    </style>
+  <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      // Esta linha define o idioma original do seu site
+      pageLanguage: 'pt', 
+      
+      // Opcional: Para incluir idiomas específicos
+      // includedLanguages: 'en,es,fr', 
+      
+      // Opcional: Como o widget deve ser exibido
+      // layout: google.translate.TranslateElement.InlineLayout.SIMPLE 
+    }, 
+    'google_translate_element'
+  );
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_ff0ee54b29ed234d1630600ed8c1df969'
+    });
+</script>
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_ff0ee54b29ed234d1630600ed8c1df969'
+    });
+</script>
+</head>
+
+<body class="bg-[#1D1B1B] font-poppins overflow-x-hidden box-border">
+ <div id="main-header-wrapper" class="fixed top-0 left-0 w-full z-40 p-8 flex justify-between items-center">
+
+    <button id="menu-toggle" class="menu-icon-button">
+      <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="bar1" d="M20.6667 7.33333H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path id="bar2" d="M26 2H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <path id="bar3" d="M26 12.6667H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path id="bar4" d="M20.6667 18H2" stroke="#F3F3F3" stroke-width="4" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <a href="../../index.html" class="logo-container">
+      <svg class="logo-aoa" width="67" height="33" viewBox="0 0 67 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M19.7208 19.7563C18.6042 11.4653 23.9047 3.76403 31.5583 2.55767C39.2072 1.35215 46.3104 7.09057 47.4262 15.3765C40.1397 34.3321 43.7771 32.7135 35.95 32.7354C34.9972 32.738 34.1161 32.7534 33.2995 32.7716L27.8532 32.7801C23.3724 32.4224 22.2434 30.2293 19.7208 19.7563Z"
+          fill="#FCFCFC" />
+        <path
+          d="M12.2769 0L15.8881 0.0508744L21.8061 17.0048L23.686 25.3094L28.5735 32.4277H23.686C22.9958 30.1715 21.5906 26.8402 20.7359 24.473L14.504 7.06113L14.0597 5.96764C12.8293 8.24769 10.5905 15.0892 9.59172 17.7392C7.75705 22.6084 5.87003 27.5311 4.04582 32.4057L0 32.4277C1.23289 28.7722 2.9859 24.5381 4.3574 20.8835C6.92996 13.8921 9.56994 6.93046 12.2769 0Z"
+          fill="#FCFCFC" />
+        <path
+          d="M54.7231 0L51.1119 0.0508744L45.1939 17.0048L43.314 25.3094L38.4265 32.4277H43.314C44.0042 30.1715 45.4094 26.8402 46.2641 24.473L52.496 7.06113L52.9403 5.96764C54.1707 8.24769 56.4095 15.0892 57.4083 17.7392C59.2429 22.6084 61.13 27.5311 62.9542 32.4057L67 32.4277C65.7671 28.7722 64.0141 24.5381 62.6426 20.8835C60.07 13.8921 57.4301 6.93046 54.7231 0Z"
+          fill="#FCFCFC" />
+        <defs>
+        </defs>
+      </svg>
+
+      <svg class="logo-aurora" width="229" height="32" viewBox="0 0 229 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g class="letras-escondidas">
+          <path class="u"
+            d="M60.7722 0.29425L64.6292 0.303827L64.6204 3.94695C64.5701 9.09412 64.7264 14.2452 64.6563 19.3981C64.6056 23.117 63.5889 26.7117 60.6442 29.1267C56.5387 32.4935 49.0954 32.4808 45.314 28.588C43.9716 27.1868 43.0276 25.4326 42.5856 23.5162C41.9379 20.8154 42.1382 16.0086 42.1508 13.0929L42.1973 0.342611L45.98 0.324762L45.9863 13.1643C45.9627 19.0912 44.8374 27.6723 52.9512 27.7921C61.8556 27.9238 60.7595 19.6037 60.7536 13.3517L60.7722 0.29425Z"
+            fill="#FCFCFC" />
+          <path class="r1"
+            d="M82.7506 0.375659C86.4741 0.337306 95.7634 -0.266309 98.5459 1.34104C106.751 6.08114 105.034 15.917 96.2396 18.6701C98.8742 22.845 101.786 26.825 104.35 31.0565L99.7058 31.0473C96.9842 26.3608 92.7337 20.2631 89.6846 15.5753C92.4418 15.4903 95.9857 15.696 98.1069 13.7648C99.2186 12.7585 99.8736 11.3198 99.9146 9.79485C100.124 2.62106 91.1365 4.13688 86.5527 4.204L86.5417 31.0926L82.6217 31.1815C82.68 21.0223 82.5021 10.5101 82.7506 0.375659Z"
+            fill="#FCFCFC" />
+          <path class="r2"
+            d="M168.282 0.410013C174.649 0.280135 184.284 -1.15199 186.629 6.98324C187.304 9.30971 187.064 11.8166 185.963 13.9631C184.441 16.8662 182.281 17.8934 179.432 18.7481L187.671 31.0198L183.089 31.0333C181.106 28.2409 179.161 25.1051 177.2 22.2539C176.297 20.9399 173.441 16.9577 172.889 15.757C173.351 15.4401 174.661 15.5085 175.341 15.4789C177.494 15.383 180.009 15.1847 181.353 13.6144C186.454 7.65225 180.281 3.23595 174.332 4.14291C173.381 4.28804 170.643 4.18083 169.728 4.1926C169.374 12.313 169.772 22.7333 169.694 31.0965L165.797 31.0446L165.754 0.478883L168.282 0.410013Z"
+            fill="#FCFCFC" />
+        </g>
+        <g class="letras-frente">
+          <path class="a1"
+            d="M12.3875 0.262634L16.0311 0.310995L28.0721 31.0485L23.8154 30.9678C23.119 28.8231 21.785 25.7766 20.9226 23.5264L14.6346 6.97488L14.1863 5.93541C12.9448 8.1028 10.6859 14.6063 9.6781 17.1254C7.82691 21.7539 5.92289 26.4334 4.08226 31.0672L0 31.0881C1.24399 27.6132 3.01278 23.5883 4.39664 20.1143C6.99237 13.4683 9.65612 6.85066 12.3875 0.262634Z"
+            fill="#FCFCFC" />
+          <g class="o">
+            <path
+              d="M132.295 0.167542C140.71 -1.09506 148.524 4.91505 149.752 13.5933C150.979 22.272 145.156 30.3345 136.743 31.6045C128.324 32.8754 120.502 26.8644 119.273 18.1805C118.044 9.49696 123.876 1.43102 132.295 0.167542Z"
+              fill="#FCFCFC" />
+            <path
+              d="M133.136 3.95929C139.465 3.18743 145.216 7.81728 146.026 14.3373C146.836 20.8569 142.403 26.8335 136.091 27.733C129.69 28.6452 123.797 23.9958 122.975 17.3846C122.154 10.7739 126.719 4.74161 133.136 3.95929Z"
+            fill="url(#paint1_linear_2565_185)" fill-opacity="0.23" />
+          </g>
+          <path class="a2"
+            d="M213.232 0.307459L216.817 0.293945C220.967 9.78854 225.175 21.2518 229 31.0201L224.903 31.0602C221.653 23.4484 218.488 14.7949 215.447 7.02667L214.914 6.0465C213.78 8.40479 212.169 13.0673 211.13 15.7777L205.133 31.1404L201.029 31.0728C204.511 21.301 209.288 9.97595 213.232 0.307459Z"
+            fill="#FCFCFC" />
+        </g>
+        <defs>
+          <linearGradient id="paint1_linear_2565_185" x1="134.5" y1="3.87524" x2="134.5" y2="27.8473"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0.0625" />
+            <stop offset="0.605769" stop-color="#BBB8B8" />
+            <stop offset="0.894231" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </a>
+  </div>
+
+  <nav id="side-menu" class="side-menu">
+    <div class="menu-content">
+
+      <div class="menu-header">
+        <button class="close-menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 6L18 18" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <ul class="main-links">
+        <li><a href="../../index.html" class="menu-link" data-i18n-key="menuHome">INÍCIO</a></li>
+
+        <li class="dropdown-item">
+          <a href="#" class="menu-link has-dropdown" data-dropdown="temas">
+            <span data-i18n-key="menuExploreThemes">EXPLORAR POR TEMAS</span>
+            <span class="arrow-svg">
+              <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.00006L7.92308 7.00006L16 1.00006" stroke="white" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </span>
+          </a>
+          <ul class="submenu" id="dropdown-temas">
+            <li><a href="../temas/fundamentos.html" data-i18n-key="themeFundamentos">Fundamentos Teóricos e Conceituais</a>
+            </li>
+            <li><a href="../temas/aeletromecanica.html" data-i18n-key="themeEletromecanica">A Era Eletromecânica</a></li>
+            <li><a href="../temas/computacaoparafins.html" data-i18n-key="themeFinsEspecificos">Computação para Fins
+                Específicos</a></li>
+            <li><a href="../temas/arevolucao.html" data-i18n-key="themeRevolucao">A Revolução Eletrônica: Válvulas</a></li>
+            <li><a href="../temas/nascimentoSoftware.html" data-i18n-key="themeSoftware">O Nascimento do Software Moderno</a>
+            </li>
+            <li><a href="../temas/tecnologias.html" data-i18n-key="themeTecnologias">Tecnologias, Pessoas e Comunidade</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown-item">
+          <a href="#" class="menu-link has-dropdown" data-dropdown="eras">
+            <span data-i18n-key="menuExploreEras">EXPLORAR POR ERAS</span>
+            <span class="arrow-svg">
+              <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.00006L7.92308 7.00006L16 1.00006" stroke="white" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </span>
+          </a>
+          <ul class="submenu" id="dropdown-eras">
+            <li><a href="../eras/asprimeirasideias.html" data-i18n-key="eraIdeias">As Primeiras Ideias (1936–1939)</a></li>
+            <li><a href="../eras/osprimeiroscomputadores.html" data-i18n-key="eraComputadores">Os Primeiros Computadores
+                (1940–1946)</a></li>
+            <li><a href="../eras/aeradaexpansao.html" data-i18n-key="eraExpansao">A Era da Expansão (1947–1950)</a></li>
+          </ul>
+        </li>
+
+        <li><a href=".././pages/Quiz.html" class="menu-link" data-i18n-key="menuQuiz">QUIZ</a></li>
+      </ul>
+      <div class="menu-footer">
+        <a href="../pages/conteudo/sobrenos.html" class="about-link" data-i18n-key="menuAbout">SOBRE NÓS</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <div id="menu-overlay" class="menu-overlay"></div>
+  <!-- Banner principal -->
+  <section class="relative h-[calc(110vh-80px)] w-full overflow-hidden">
+    <!-- Imagem de fundo -->
+    <img src="../../assets/img/computacaoparafins.png" alt="O Nascimento"
+      class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Texto central -->
+    <div class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
+      <h1 class="text-white text-center font-playfair uppercase font-extrabold leading-normal
+                   text-[2.5rem] sm:text-[2.4rem] md:text-[3rem]
+                   max-w-[28rem] sm:max-w-[90%] md:max-w-none">
+        Computação para Fins Específicos: <br> Guerra e Ciência
+      </h1>
+
+      <div class="h-[2px] w-full max-w-[25rem] bg-[rgba(219,219,219,0.8)] mx-auto"></div>
+    </div>
+  </section>
+
+  <!--Seção dos Cards-->
+  <section class="bg-[#1D1B1B] py-20 px-6 md:px-16 text-white">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Cards -->
+      <div class="flex flex-col md:flex-row gap-[14rem] mt-[9rem]">
+
+        <!-- Card Grande + Parágrafo -->
+        <div class="flex flex-col w-full md:w-[37rem] max-w-full box-border">
+          <div class="relative overflow-hidden rounded-[0.625rem] group shadow-lg cursor-pointer h-[31rem]">
+            <a href="../conteudo/enigmaeabomba.html">
+            <img src="../../assets/img/enigma.png" alt="enigma"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+            </div>
+
+            <!-- Linha de tempo -->
+            <div
+              class="absolute bottom-[7rem] left-4 right-4 flex items-center justify-between text-[1rem] font-playfair text-[rgba(219,219,219,0.8)]">
+              <span>1920</span>
+              <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-4"></div>
+              <span>ALAN TURING</span>
+            </div>
+
+            <h3
+              class="absolute bottom-[2rem] left-4 text-lg md:text-xl font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+              <span class="flex items-center gap-2">
+                Enigma e a Bomba Criptológica de <br> Turing
+              </span>
+            </h3>
+            </a>
+          </div>
+
+          <!-- Parágrafo abaixo -->
+          <p
+            class="text-[#FFF] text-opacity-50 font-montserrat text-[1rem] font-normal leading-normal tracking-[0.02rem] mt-4">
+            A cifra que guardava segredos de guerra e a máquina genial <br> criada para quebrá-la. Mergulhe na história
+            da criptografia <br> nazista e da corrida para decifrá-la em Bletchley Park.
+          </p>
+        </div>
+
+        <!-- Card Pequeno + Parágrafo -->
+        <div class="flex flex-col w-full md:w-[24rem] max-w-full box-border">
+          <div class="relative overflow-hidden rounded-[0.625rem] group shadow-lg cursor-pointer h-[31rem]">
+            <a href="../conteudo/rda2.html">
+            <img src="../../assets/img/rda2.png" alt="Transistor"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+            </div>
+
+            <!-- Linha de tempo -->
+            <div
+              class="absolute bottom-[7rem] left-4 right-4 flex items-center justify-between text-[1rem] font-playfair text-[rgba(219,219,219,0.8)]">
+              <span>1942</span>
+              <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-4"></div>
+              <span> JOHN D. ROCKEFELLER</span>
+            </div>
+
+            <h3
+              class="absolute bottom-[2rem] left-4 text-lg md:text-xl font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] flex items-center gap-2">
+              RDA2:<br>Rockefeller
+            </h3>
+          </div>
+
+          <!-- Parágrafo abaixo -->
+          <p
+            class="text-[#FFF] text-opacity-50 font-montserrat text-[1rem] font-normal leading-normal tracking-[0.02rem] mt-4">
+            Uma versão aprimorada e mais poderosa do <br> analisador diferencial.
+          </p>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-[3rem] mt-[4rem]">
+
+        <!-- Card Grande + Parágrafo -->
+        <div class="flex flex-col w-full md:w-[37rem] max-w-full box-border">
+          <div class="relative overflow-hidden rounded-[0.625rem] group shadow-lg cursor-pointer h-[31rem]">
+            <a href="../conteudo/rapidarithmetical.html">
+            <img src="../../assets/img/rapid arithmetical machine.png" alt="rapid"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+            </div>
+
+            <!-- Linha de tempo -->
+            <div
+              class="absolute bottom-[4rem] left-4 right-4 flex items-center justify-between text-[1rem] font-playfair text-[rgba(219,219,219,0.8)]">
+              <span>1936</span>
+              <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-4"></div>
+              <span>VANNEVAR BUSH</span>
+            </div>
+
+            <h3
+              class="absolute bottom-[2rem] left-4 text-lg md:text-xl font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+              <span class="flex items-center gap-2">
+                Rapid Arithmetical Machine
+              </span>
+            </h3>
+          </div>
+
+          <!-- Parágrafo abaixo -->
+          <p
+            class="text-[#FFF] text-opacity-50 font-montserrat text-[1rem] font-normal leading-normal tracking-[0.02rem] mt-4">
+            Criada por Vannevar Bush nos anos 1930, foi uma das pioneiras no uso <br> de circuitos e engrenagens para
+            automatizar cálculos, abrindo caminho <br> para os computadores modernos.
+          </p>
+          </a>
+        </div>
+
+        <!-- Card Pequeno + Parágrafo -->
+        <div class="flex flex-col w-full md:w-[37rem] max-w-full box-border">
+          <div class="relative overflow-hidden rounded-[0.625rem] group shadow-lg cursor-pointer h-[31rem]">
+            <a href="../conteudo/colossus.html">
+            <img src="../../assets/img/colossusmark1.png" alt="colossus"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-75" />
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500">
+            </div>
+
+            <!-- Linha de tempo -->
+            <div
+              class="absolute bottom-[4rem] left-4 right-4 flex items-center justify-between text-[1rem] font-playfair text-[rgba(219,219,219,0.8)]">
+              <span>1943 – 1945</span>
+              <div class="flex-1 h-[1px] bg-[rgba(219,219,219,0.8)] mx-4"></div>
+              <span>TOMMY FLOWERS</span>
+            </div>
+
+            <h3
+              class="absolute bottom-[2rem] left-4 text-lg md:text-xl font-oswald uppercase drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)] flex items-center gap-2">
+              Colossus Mark I
+            </h3>
+          </div>
+
+          <!-- Parágrafo abaixo -->
+          <p
+            class="text-[#FFF] text-opacity-50 font-montserrat text-[1rem] font-normal leading-normal tracking-[0.02rem] mt-4">
+            O gigante eletrônico ultrassecreto. Veja como o Colossus foi <br> usado para decifrar as mensagens
+            criptografadas do Alto <br> Comando Alemão, acelerando o fim da Segunda Guerra.
+          </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section class="bg-[#1D1B1B] py-20 px-6 md:px-16 text-white mt-40">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center md:text-left mb-12">
+        <h2 data-i18n-key="themesTitle" class="text-5xl md:text-4xl font-oswald font-semibold uppercase tracking-wide">
+          VEJA MAIS...
+        </h2>
+        <div class="w-[8rem] h-[2px] bg-gray-500 mx-auto md:mx-0 mt-3 max-w-full box-border"></div>
+        
+      </div>
+
+      <div class="relative w-full max-w-6xl mx-auto">
+        <div id="temas-carousel-viewport" class="overflow-hidden">
+
+          <div id="temas-carousel-track" class="flex transition-transform duration-500 ease-in-out">
+
+            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 px-2">
+              <div class="relative w-full h-[21.125rem] rounded-[20px] overflow-hidden group shadow-lg">
+                <img src="../../assets/img/maquinaturing.png" alt="Fundamentos Teóricos e Conceituais"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all"></div>
+                <div class="relative z-10 p-6 h-full flex flex-col text-white">
+                  <h3 class="font-oswald text-3xl font-semibold uppercase">Fundamentos Teóricos e Conceituais</h3>
+                  <p class="font-montserrat text-sm mt-4 flex-grow">
+                    Antes do primeiro chip ou circuito, existia a ideia. Explore os modelos teóricos e os conceitos
+                    matemáticos que formam o DNA de toda a computação moderna...
+                  </p>
+                  <a href="./fundamentos.html" class="mt-auto">
+                    <button
+                      class="w-40 border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 font-poppins text-sm cursor-pointer">
+                      Veja Mais
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 px-2">
+              <div class="relative w-full h-[21.125rem] rounded-[20px] overflow-hidden group shadow-lg">
+                <img src="../../assets/img/A ERA ELETROMECÂNICA_ RELÉS E ENGRENAGENS.png" alt="A Era Eletromecânica: Relés e Engrenagens"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all"></div>
+                <div class="relative z-10 p-6 h-full flex flex-col text-white">
+                  <h3 class="font-oswald text-3xl font-semibold uppercase">A Era Eletromecânica: Relés e Engrenagens
+                  </h3>
+                  <p class="font-montserrat text-sm mt-4 flex-grow">
+                    Com o som de relés e engrenagens, nasceram as primeiras máquinas de calcular programáveis. Conheça os
+                    gigantes eletromecânicos...
+                  </p>
+                  <a href="./aeletromecanica.html" class="mt-auto">
+                    <button
+                      class="w-40 border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 font-poppins text-sm cursor-pointer">
+                      Veja Mais
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 px-2">
+              <div class="relative w-full h-[21.125rem] rounded-[20px] overflow-hidden group shadow-lg">
+                <img src="../../assets/img/COMPUTAÇAO PARA FINS ESPECIFICOS_ GUERRA E CIENCIA.png" alt="Computação para Fins Específicos"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all"></div>
+                <div class="relative z-10 p-6 h-full flex flex-col text-white">
+                  <h3 class="font-oswald text-3xl font-semibold uppercase">Computação para Fins Específicos: Guerra e
+                    Ciência</h3>
+                  <p class="font-montserrat text-sm mt-4 flex-grow">
+                    A necessidade impulsionou a inovação. Descubra como a Segunda Guerra Mundial acelerou a criação de
+                    máquinas como o Colossus e o ENIAC...
+                  </p>
+                  <a href="./computacaoparafins.html" class="mt-auto">
+                    <button
+                      class="w-40 border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 font-poppins text-sm cursor-pointer">
+                      Veja Mais
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 px-2">
+              <div class="relative w-full h-[21.125rem] rounded-[20px] overflow-hidden group shadow-lg">
+                <img src="../../assets/img/A REVOLUCAO ELETRONICA A ERA DAS VALVULAS.png" alt="A Revolução Eletrônica: A Era das Válvulas"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all"></div>
+                <div class="relative z-10 p-6 h-full flex flex-col text-white">
+                  <h3 class="font-oswald text-3xl font-semibold uppercase">A Revolução Eletrônica: A Era das Válvulas
+                  </h3>
+                  <p class="font-montserrat text-sm mt-4 flex-grow">
+                    Os relés deram lugar às válvulas eletrônicas, permitindo cálculos em velocidades nunca antes
+                    imaginadas. Conheça o ENIAC, EDVAC e o UNIVAC I...
+                  </p>
+                  <a href="./arevolucao.html" class="mt-auto">
+                    <button
+                      class="w-40 border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 font-poppins text-sm cursor-pointer">
+                      Veja Mais
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 px-2">
+              <div class="relative w-full h-[21.125rem] rounded-[20px] overflow-hidden group shadow-lg">
+                <img src="../../assets/img/O NASCIMENTO DO SOFTWARE E DO COMPUTADOR MODERNO.png"
+                  alt="O Nascimento do Software e do Computador Moderno"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all"></div>
+                <div class="relative z-10 p-6 h-full flex flex-col text-white">
+                  <h3 class="font-oswald text-3xl font-semibold uppercase">O Nascimento do Software e do Computador
+                    Moderno</h3>
+                  <p class="font-montserrat text-sm mt-4 flex-grow">
+                    Com o hardware estabelecido, a próxima fronteira era o software. Explore a arquitetura de von
+                    Neumann, o conceito de programa armazenado...
+                  </p>
+                  <a href="./nascimentoSoftware.html" class="mt-auto">
+                    <button
+                      class="w-40 border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 font-poppins text-sm cursor-pointer">
+                      Veja Mais
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 px-2">
+              <div class="relative w-full h-[21.125rem] rounded-[20px] overflow-hidden group shadow-lg">
+                <img src="../../assets/img/TECNOLOGIAS PESSOAS E COMUNIDADE.png" alt="Tecnologias, Pessoas e Comunidade"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-all"></div>
+                <div class="relative z-10 p-6 h-full flex flex-col text-white">
+                  <h3 class="font-oswald text-3xl font-semibold uppercase">Tecnologias, Pessoas e Comunidade</h3>
+                  <p class="font-montserrat text-sm mt-4 flex-grow">
+                    A computação não foi feita apenas de máquinas, mas de pessoas. Conheça as mentes brilhantes, as
+                    colaborações e as comunidades...
+                  </p>
+                  <a href="./tecnologias.html" class="mt-auto">
+                    <button
+                      class="w-40 border border-white rounded-full py-2 px-6 uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300 font-poppins text-sm cursor-pointer">
+                      Veja Mais
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button id="temas-prev-btn"
+          class="absolute top-1/2 left-2 md:left-0 md:-translate-x-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 transition-all rounded-full p-2 disabled:opacity-0 disabled:cursor-not-allowed cursor-pointer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button id="temas-next-btn"
+          class="absolute top-1/2 right-2 md:right-0 md:translate-x-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 transition-all rounded-full p-2 disabled:opacity-0 disabled:cursor-not-allowed cursor-pointer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <div id="temas-dots-container" class="flex justify-center gap-2 mt-8">
+          <button class="carousel-dot active w-3 h-3 bg-gray-600 rounded-full transition-all" data-slide="0"></button>
+          <button class="carousel-dot w-3 h-3 bg-gray-600 rounded-full transition-all" data-slide="1"></button>
+          <button class="carousel-dot w-3 h-3 bg-gray-600 rounded-full transition-all" data-slide="2"></button>
+          <button class="carousel-dot w-3 h-3 bg-gray-600 rounded-full transition-all" data-slide="3"></button>
+          <button class="carousel-dot w-3 h-3 bg-gray-600 rounded-full transition-all" data-slide="4"></button>
+          <button class="carousel-dot w-3 h-3 bg-gray-600 rounded-full transition-all" data-slide="5"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+ <footer class="bg-[#161515] text-gray-400 pt-16 pb-8 mt-40">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+
+        <div class="sm:col-span-2 md:col-span-1">
+          <a href="../../index.html" class="block w-48 mb-4">
+            <img src="../../assets/img/logo principal.png" alt="Logo Aurora da Computação" data-i18n-alt="footerLogoAlt">
+          </a>
+          <p class="font-montserrat text-sm text-gray-500 leading-relaxed pr-4" data-i18n-key="footerDesc">
+            Um projeto dedicado a iluminar os marcos e mentes que fundaram a era digital, da primeira engrenagem ao
+            primeiro byte.
+          </p>
+          <div class="flex space-x-4 mt-6">
+            <a href="#" aria-label="GitHub" class="text-gray-500 hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="text-gray-500 hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-oswald font-bold text-lg text-white uppercase tracking-wider mb-4" data-i18n-key="footerExploreThemesTitle">
+            Explorar por Temas
+          </h3>
+          <nav class="font-montserrat flex flex-col space-y-3">
+            <a href="../temas/fundamentos.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerThemeLink1">Fundamentos Teóricos e Conceituais</a>
+            <a href="../temas/aeletromecanica.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerThemeLink2">A Era Eletromecânica: Relês e Engrenagens</a>
+            <a href="../temas/computacaoparafins.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerThemeLink3">Computação para Fins Específicos: Guerra e Ciência</a>
+            <a href="../temas/arevolucao.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerThemeLink4">A Revolução Eletrônica: A Era das Válvulas</a>
+            <a href="../temas/nascimentoSoftware.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerThemeLink5">O nascimento do Software e do Computador</a>
+            <a href="../temas/tecnologias.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerThemeLink6">Tecnologias, Pessoas e Comunidade</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="font-oswald font-bold text-lg text-white uppercase tracking-wider mb-4" data-i18n-key="footerExploreErasTitle">
+            Explorar por Eras
+          </h3>
+          <nav class="font-montserrat flex flex-col space-y-3">
+            <a href="../eras/aeradaexpansao.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerEraLink1">A Era da Expansão</a>
+            <a href="../eras/asprimeirasideias.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerEraLink2">As Primeiras Ideias</a>
+            <a href="../eras/osprimeiroscomputadores.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerEraLink3">Os Primeiros Computadores</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="font-oswald font-bold text-lg text-white uppercase tracking-wider mb-4" data-i18n-key="footerResourcesTitle">
+            Recursos
+          </h3>
+          <nav class="font-montserrat flex flex-col space-y-3">
+            <a href="../../index.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerResourceLink1">Início</a>
+            <a href="../conteudo/sobrenos.html" class="hover:text-white hover:pl-1 transition-all duration-200" data-i18n-key="footerResourceLink2">Sobre o Projeto</a>
+          </nav>
+        </div>
+        <div id="google_translate_element"></div>
+
+      </div>
+
+      <div
+        class="font-montserrat mt-16 pt-8 border-t border-gray-700/50 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <p data-i18n-key="footerCopyright">&copy; 2025 Aurora da Computação. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+    <script src="../../js/carrossel-temas.js"></script>
+    <script src="../../js/MenuEHeader.js"> </script>
+    <script src="../../js/ScrollReveal.js"></script>
+</body>
+
+</html>
