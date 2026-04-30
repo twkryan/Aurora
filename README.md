@@ -236,7 +236,7 @@ npm run dev
 </table>
 
 <p align="center">
-  <strong>Projeto desenvolvido na <a href="#">ETEC SEBRAE</a> — Centro Paula Souza, São Paulo/SP</strong>
+  <strong>Projeto desenvolvido na <a href="https://www.etecsebrae.com/">ETEC SEBRAE</a> — Centro Paula Souza, São Paulo/SP</strong>
 </p>
 
 ---
